@@ -92,8 +92,8 @@
             <span class="heading">Educa Tu Credito</span>
           </a>
           <div class="contactdetails">
-            <span><v-icon>phone</v-icon> 813-444-5539</span>
-            <v-icon>mail</v-icon> <a href="mailto:info@educatucredito.com">info@educatucredito.com</a>
+            <a href="tel:813-444-5539"><v-icon>phone</v-icon> <span>813-444-5539</span></a>
+            <a href="mailto:info@educatucredito.com"><v-icon>mail</v-icon> <span>info@educatucredito.com</span></a>
           </div>
           <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
@@ -108,11 +108,14 @@
                 <a class="nav-link js-scroll-trigger" href="/#/about-us">{{ link.aboutus }}</a>
               </li>
               <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="https://blog.educatucredito.com">Blogs</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="/#/why-choose-us">{{ link.whyus }}</a>
               </li>
               <li class="nav-item">
                   <a class="nav-link js-scroll-trigger" href="/#/login">{{ link.login }}</a>
-                </li>
+              </li>
             </ul>
           </div>
           <!-- <div class="changelang">
@@ -156,10 +159,10 @@
             </div>
 
             <div class="copyright-reserved">&copy; Educa Tu Credito 2018. All Rights Reserved.</div>
-            <div class="contactdetails2">
-              <span><v-icon>phone</v-icon> 813-444-5539</span>
-              <v-icon>mail</v-icon> <a href="mailto:info@educatucredito.com">info@educatucredito.com</a>
-            </div>
+          <div class="contactdetails2">
+            <a href="tel:813-444-5539"><v-icon>phone</v-icon> <span>813-444-5539</span></a>
+            <a href="mailto:info@educatucredito.com"><v-icon>mail</v-icon> <span>info@educatucredito.com</span></a>
+          </div>
             <ul class="footernav">
               <li class="">
                 <a class="" href="/#/home">{{ link.home }}</a>
@@ -456,6 +459,21 @@
   #mainNav .heading {
     line-height: 1.8;
   }
+  
+contactdetails .v-icon{
+  display: inline-block;
+  font-weight: 700;
+  vertical-align: middle;
+  text-decoration: none;
+  color: white;
+}
+contactdetails .span{
+  display: inline-block;
+  font-weight: 700;
+  vertical-align: middle;
+  text-decoration: none;
+  color: white;
+}
 </style>
 <style scoped>
   .list__tile__title {

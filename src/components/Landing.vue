@@ -252,6 +252,7 @@
     data () {
       return {
         translationText: [],
+        questions:[],
         first_name: '',
         last_name: '',
         email_add: '',
@@ -287,11 +288,12 @@
     watch: {
       '$parent.$parent.$parent.language' (v) {
         this.translation(this.$parent.$parent.$parent.language)
-    },
-    '$route.params' () {
-      init bxSlider => {
-        adaptiveHeight: true
       }
+    },
+    mounted () {
+      slider = $('.slider').bxSlider({
+        adaptiveHeight: true
+      })
     },
     computed: {
     },
@@ -485,15 +487,7 @@
     components: {
     }
   }
-  $(document).ready(function(){
-    $('.slider').bxSlider({
-      adaptiveHeight: true
-    });
-    // var video = Wistia.api("h4z90hkwgl")
-    // video.bind("end", function() {
-      
-    // })
-  })
+
 </script>
 <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
 <style type="text/css">
