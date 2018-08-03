@@ -1,10 +1,22 @@
 <template>
   <v-container fluid>
-
-    <section class="section2 pt-5">
-      <div class="container pt-5">
+    <header class="masthead3">
+      <div class="container">
         <div class="row">
-          <v-flex xs12 sm12 md8 lg8 class="my-auto">
+          <div class="col-lg-12 my-auto">
+            <div class="header-content mx-auto">
+
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+        </div>
+      </div>
+    </header>
+    <section class="section2 p-5 pt-0">
+      <div class="container p-5">
+        <div class="row p-5">
+          <v-flex xs12 sm12 md12 lg12 class="my-auto">
             <h2>About Us</h2>
             <p>Estamos más allá de la reparación de crédito por única vez. Nuestro equipo está dedicado a ayudarlo a desarrollar una relación más saludable con su crédito. Nuestro enfoque y objetivo principal es usted, su situación, su historia y su disposición a realizar un cambio en su vida financiera para usted y su familia. Queremos alentarlo a hacer un buen cambio de estilo de vida que pueda darle la clave para sus sueños financieros.</p>
             <p>Un puntaje de crédito no es solo un número; es un estilo de vida. Lo ayudaremos a lograr un buen estilo de vida financiero. Nuestra compañía de expertos financieros cree que podemos hacer un cambio significativo en su vida.</p>
