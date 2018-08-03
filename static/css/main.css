@@ -821,7 +821,7 @@ header.masthead, header.masthead2 {
 
 @media only screen and (max-width:320px){
   .contactdetails2 span{
-    display: block;
+    display: inline-block;
   }
   #PureChatWidget{
     width: 100% !important;;
