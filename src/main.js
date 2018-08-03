@@ -16,9 +16,9 @@ Vue.use(VueCordova)
 Vue.use(VueHead)
 
 if (process.env.NODE_ENV === 'development') {
-  window.apiLink = 'http://www.educatucredito.com/api/v1/'
+  window.apiLink = 'https://www.educatucredito.com/api/v1/'
 } else {
-  window.apiLink = 'http://www.educatucredito.com/api/v1/'
+  window.apiLink = 'https://www.educatucredito.com/api/v1/'
 }
 // add cordova.js only if serving the app through file://
 if (window.location.protocol === 'file:' || window.location.port === '3000') {
