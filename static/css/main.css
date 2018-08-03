@@ -254,13 +254,17 @@ section.features .featurelist .col-sm-6 ul li h4:before{
   background-image: url(../img/section-3-bg.png);
   padding-top: 47px;
 }
-header.masthead, header.masthead2 {
+header.masthead, header.masthead2, header.masthead3 {
   background-image: url(../img/section-1-bg.png);
   background-size: cover;
   height: 800px;
 }
 header.masthead2 {
   background-image: url(../img/section-why-us.png);
+  /* background-size: contain; */
+}
+header.masthead3 {
+  background-image: url(../img/about-us.png);
   /* background-size: contain; */
 }
 .masthead h1, .masthead2 h1 {
@@ -715,6 +719,11 @@ header.masthead, header.masthead2 {
   padding: 0 15px;
 }
 /* about page */
+.v-dialog--fullscreen .v-list {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
 }
 @media only screen and (max-width:479px){
   .v-subheader{
@@ -722,6 +731,11 @@ header.masthead, header.masthead2 {
     height: auto !important;
     max-width: 260px;
     margin: 0 auto;
+  }
+  .v-dialog--fullscreen .v-list {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
   }
 }
 
@@ -744,6 +758,11 @@ header.masthead, header.masthead2 {
     padding-top: 100px !important;
   }
   /* about page */
+  .v-dialog--fullscreen .v-list {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width:320px){
@@ -753,4 +772,12 @@ header.masthead, header.masthead2 {
   #PureChatWidget{
     width: 100% !important;;
   }
+  .v-dialog--fullscreen .v-list {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+}
+.v-dialog--fullscreen {
+  background: rgba(0, 0, 0, 0.5);
 }
