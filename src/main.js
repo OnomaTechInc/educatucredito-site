@@ -8,6 +8,7 @@ import VueHead from 'vue-head'
 import store from './store'
 import App from './App'
 import router from './router'
+// import colors from 'vuetify/es5/util/colors'
 
 Vue.use(Vuetify)
 Vue.config.productionTip = false
@@ -15,9 +16,9 @@ Vue.use(VueCordova)
 Vue.use(VueHead)
 
 if (process.env.NODE_ENV === 'development') {
-  window.apiLink = 'https://educatucredito.com/api/v1/'
+  window.apiLink = 'http://www.educatucredito.com/api/v1/'
 } else {
-  window.apiLink = 'https://educatucredito.com/api/v1/'
+  window.apiLink = 'http://www.educatucredito.com/api/v1/'
 }
 // add cordova.js only if serving the app through file://
 if (window.location.protocol === 'file:' || window.location.port === '3000') {
