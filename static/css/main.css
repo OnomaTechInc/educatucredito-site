@@ -481,6 +481,53 @@ background-color: #3ea8d9;
 }
 /* for translate */
 
+/* about */
+.aboutus{
+  padding: 50px 0;
+  background-color: #f5f5f5;
+}
+.aboutus .about p{
+  font-size: 1.35rem;
+  line-height: 1.5;
+  margin: 15px 0;
+}
+.aboutus .list {
+  margin-bottom: 30px;
+}
+.aboutus .list ul{
+  padding-left: 30px;
+  list-style: square;
+}
+.aboutus .list ul li{
+  margin-bottom: 10px;
+}
+/* about */
+
+/* whyUS */
+  .whyUs{
+    padding: 50px 0;
+    background-color: #f5f5f5;
+  } 
+  .whyUs .info-box .row{
+    margin: 50px 0;
+  }
+  .whyUs .info-box p{
+    font-size: 1.35rem;
+    line-height: 1.5;
+    margin: 15px 0;
+  }
+  .whyUs .list {
+    margin-bottom: 30px;
+  }
+  .whyUs .list ul{
+    padding-left: 30px;
+    list-style: square;
+  }
+  .whyUs .list ul li{
+    margin-bottom: 10px;
+  }
+/* whyUS */
+
 
 
 
@@ -724,6 +771,9 @@ header.masthead, header.masthead2 {
   bottom: 0;
   width: 100%;
 }
+.whyUs .container,.aboutus .container{
+  padding: 0 15px;
+}
 }
 @media only screen and (max-width:479px){
   .v-subheader{
@@ -762,6 +812,10 @@ header.masthead, header.masthead2 {
     position: fixed;
     bottom: 0;
     width: 100%;
+  }
+  .contactdetails2 a{
+    display: block;
+    margin: 5px 0;
   }
 }
 
