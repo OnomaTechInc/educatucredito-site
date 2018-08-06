@@ -477,6 +477,10 @@ contactdetails .span{
   text-decoration: none;
   color: white;
 }
+a:hover {
+  text-decoration: none;
+}
+
 </style>
 <style scoped>
   .list__tile__title {

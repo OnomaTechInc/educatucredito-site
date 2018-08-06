@@ -38,7 +38,6 @@
                       name="password" 
                       label="Password" 
                       id="password" 
-                      type="password" 
                       v-model="pass" 
                       :error="error"
                       :append-icon="e1 ? 'visibility' : 'visibility_off'"

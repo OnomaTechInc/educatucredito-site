@@ -62,7 +62,7 @@
                     ></v-text-field>
                   </v-flex>
                   <v-flex xs12 sm12 md12>
-                    <v-btn color="error" @click="">Reset password</v-btn>
+                    <v-btn color="error" @click="changePasswd">Change password</v-btn>
                   </v-flex>
                 </v-layout>
               </v-container>
@@ -75,6 +75,34 @@
         </v-container>
       </v-layout>
     </v-slide-y-transition>
+    <v-dialog v-model="dialog2" max-width="500px">
+      <v-card>
+        <v-card-title>
+          <h2>Change Password</h2>
+        </v-card-title>
+        <v-card-text>
+          <v-text-field
+            v-model="oldpassword"
+            label="Current Password"
+          >
+          </v-text-field>
+          <v-text-field
+            v-model="newpassword"
+            label="New Password"
+          >
+          </v-text-field>
+          <v-text-field
+            v-model="confirmpassword"
+            label="Confirm Password"
+          >
+          </v-text-field>
+        </v-card-text>
+        <v-card-actions>
+          <v-btn color="secondary" flat @click.stop="dialog2=false">Cancel</v-btn>
+          <v-btn color="primary" flat @click.stop="dialog2=false">Save</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
   </v-container>
 </template>
 
@@ -114,7 +142,7 @@ a {
   left: 50%;
   top: -60px;
   transform: translateX(-50%);
-  z-index: 999999999999
+  z-index: 999;
 }
 </style>
 <script>
@@ -125,6 +153,7 @@ a {
     data () {
       return {
         dialog: false,
+        dialog2: false,
         loading: true,
         search: '',
         items: [],
@@ -134,6 +163,9 @@ a {
           company: '',
           position: ''
         },
+        confirmpassword: '',
+        newpassword: '',
+        oldpassword: '',
         photoIsLoaded: false,
         session: '',
         loadPhoto: function (val) {
@@ -150,26 +182,14 @@ a {
     computed: {
     },
     watch: {
-      dialog (val) {
-        this.photoIsLoaded = true
-        val || this.close()
-      }
     },
     created () {
-      // this.initialize()
+      this.initialize()
     },
     methods: {
-      resetPasswd () {
+      changePasswd () {
         // var d = this
-        this.$store.dispatch('confirmer/ask', {
-          title: 'Confirm Reset',
-          body: 'Are you sure you want to reset this user\'s password?'
-        }).then(confirmation => {
-          if (confirmation) {
-            // @TODO: reset password
-          }
-          // d.dialog = false
-        })
+        this.dialog2 = true
       },
 
       uploadPhoto () {
@@ -180,22 +200,23 @@ a {
         var d = this
         this.session = JSON.parse(localStorage.getItem('session'))
         axios.defaults.headers.common['Authorization'] = `bearer ${this.session.api_key}`
-        axios.get(window.apiLink + 'users').then(function (response) {
+        axios.get(`${window.apiLink}users/${d.session.id}`).then(function (response) {
           // localStorage.setItem('session', JSON.stringify(response.data))
           // d.$emit('setRoleName', response.data)
           var items = []
-          for (var x = 0; x < response.data.result.length; x++) {
-            items.push({
-              id: response.data.result[x].id,
-              name: response.data.result[x].name,
-              avatar: response.data.result[x].user_image,
-              email: response.data.result[x].email,
-              company: response.data.result[x].company,
-              position: response.data.result[x].position
-            })
+          // for (var x = 0; x < response.data.result.length; x++) {
+          items = {
+            id: response.data.result[0].id,
+            name: response.data.result[0].name,
+            avatar: response.data.result[0].user_image,
+            email: response.data.result[0].email,
+            role: response.data.result[0].role,
+            position: response.data.result[0].position,
+            company: response.data.result[0].company
           }
+          // }
           d.loading = false
-          d.items = items
+          d.editedItem = items
         }).catch(function (error) {
           console.log(error)
           if (error.response !== undefined && error.response.status === 422) {
