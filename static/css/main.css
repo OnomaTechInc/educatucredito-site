@@ -1,3 +1,7 @@
+body{
+  font-size: 16px;
+}
+
 .contactdetails{
 margin-left: 24px;
     font-size: 20px;
@@ -529,7 +533,97 @@ background-color: #3ea8d9;
 /* whyUS */
 
 
-
+/* aboutus */
+  #aboutUs header.aboutUs{
+    position: relative;
+    margin-top: 115px;
+    height: 260px;
+    margin-bottom: 30px;
+    background-image: url(../img/aboutus.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  #aboutUs  header .heading{
+    position: absolute;
+    height: 74px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0%;
+    right: 0;
+  }
+  header .heading h3{
+    font-size: 2.85rem;
+    margin:0;
+    margin-bottom: 10px;
+    line-height: 1;
+    color: white;
+  }  
+  header .heading .lead{
+    font-size: 1.65rem;;
+    line-height: 1;
+    color: white;
+  }
+  section .container p{
+    max-width: 750px;
+    margin: 50px auto;
+    padding: 0 15px;
+    word-break: keep-all;
+  }
+  .aboutContent .pns{
+    margin-top: 80px;
+  }
+  .aboutContent .pns .textOrange{
+    color: #e3612e;
+    text-transform: uppercase;
+    font-size: 27.99px;
+    margin-bottom: 50px;
+  }
+  .aboutContent .pns ul{
+    list-style: square;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  .aboutContent .pns ul li{
+    display: inline-block;
+    width: 33.33%;
+    text-align: center;
+    list-style: square;
+    line-height: 50px;
+    box-sizing: border-box;
+  }
+  .aboutContent .pns ul li span{
+    display: inline-block;
+    position: relative;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+  }
+  .aboutContent .pns ul li span:before{
+    position: absolute;
+    content: '';
+    background-color: #e3612e;
+    width: 7px;
+    height: 7px;
+    left: -15px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  .aboutContent .pns ul li:not(first-child){
+    margin-left: -4px;
+  }
+  .aboutContent .pns p{
+    text-transform: uppercase;
+    color: #393939;
+    font-size: 1.2rem;
+  }
+  .aboutContent .pns p a{
+    color: #e3612e;
+    text-decoration: underline;
+  }
+/* aboutus */
 
 
 
@@ -597,6 +691,11 @@ header.masthead{
 }
 /* SECTION 5 */
 
+/* aboutUs */
+#aboutUs .pns ul li{
+  width: 50%;
+}
+/* aboutUs */
 
 
 }
@@ -712,6 +811,9 @@ header.masthead, header.masthead2 {
 .contactdetails {
   display: none;
 }
+
+
+
 }
 
 @media only screen and (max-width:767px){
@@ -787,6 +889,12 @@ header.masthead, header.masthead2 {
     bottom: 0;
     width: 100%;
   }
+
+  /* aboutUs */
+  #aboutUs .pns ul li{
+    width: 100%;
+  }
+/* aboutUs */
 }
 
 @media only screen and (max-width:375px){
