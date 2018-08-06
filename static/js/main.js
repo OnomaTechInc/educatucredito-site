@@ -8,7 +8,7 @@ $(document).ready(function(){
     })
     function widthChecker(widthbox){
       if(widthbox <= 991){
-        $('.nav-item').on('click',function(){
+        $('.navbar-nav .nav-item').on('click',function(){
               $('.navbar-toggler').trigger('click');
         })
       }

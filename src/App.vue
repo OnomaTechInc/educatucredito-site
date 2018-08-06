@@ -170,7 +170,7 @@
               <li class="">
                 <a class="" href="/#/about-us">{{ link.aboutus }}</a>
               </li>
-              <li class="nav-item">
+              <li class="">
                 <a class="nav-link js-scroll-trigger" href="https://blog.educatucredito.com">Blogs</a>
               </li>
               <li class="">

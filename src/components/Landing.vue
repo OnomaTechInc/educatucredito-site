@@ -246,6 +246,7 @@
 </style>
 
 <script>
+  var slider;
   import {uuid} from 'vue-uuid'
   import axios from 'axios'
   export default {
