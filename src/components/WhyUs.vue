@@ -73,9 +73,9 @@
         // only happens once.
           video.bind('end', function (t) {
             console.log('the video ended')
-          d.dialog = true
+            d.dialog = true
             video.popover.hide()
-        })
+          })
         }
       })
     },
@@ -89,7 +89,7 @@
     methods: {
       translation (val) {
         if (val === 'en') {
-          this.translationText = { 
+          this.translationText = {
             heading: 'WHY CHOOSE US',
             sectionp1: 'Financial Education is not just for the wealthy. This is for everyone. We all have the right to know that financial freedom is not impossible and it is reachable by correct guidance and help of financial experts that cares about you.',
             sectionp2: 'With many years of combined experience, we have extensive training on analysis on how credit bureaus work. We understand and we want to share our clients what legal rights they have to protect themselves during financial crisis.',
@@ -141,5 +141,5 @@
   //   // var video = Wistia.api('h4z90hkwgl')
   //   // video.bind('end', function() {
   //   // })
-    // })
+  // })
 </script>

@@ -244,7 +244,7 @@ a {
       save () {
         var data = new FormData()
         var d = this
-        var O = Object
+        // var O = Object
         data.append('file', document.getElementById('uploadFile').files[0])
         axios.put(`${window.apiLink}users/`, {
           email: d.editedItem.email,

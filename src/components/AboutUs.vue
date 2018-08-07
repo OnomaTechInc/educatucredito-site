@@ -105,13 +105,13 @@
       window._wq.push({
         id: 'h4z90hkwgl',
         onReady: function (video) {
-        // on play, seek the video to 10 seconds, then unbind so it
-        // only happens once.
+          // on play, seek the video to 10 seconds, then unbind so it
+          // only happens once.
           video.bind('end', function (t) {
             console.log('the video ended')
-          d.dialog = true
+            d.dialog = true
             video.popover.hide()
-        })
+          })
         }
       })
     },
@@ -125,7 +125,7 @@
     methods: {
       translation (val) {
         if (val === 'en') {
-          this.translationText = { 
+          this.translationText = {
             heading: 'about us',
             lead: 'We are beyond one time credit repair.',
             aboutp1: 'Our team is dedicated to helping you develop a healthier relationship with your credit. Our main focus and objective is you, your situation, your history and your willingness to make a change in your financial life for you and your family. We want to encourage you to make a good lifestyle change that can give you the key to your financial dreams.',
@@ -183,7 +183,7 @@
   //   // var video = Wistia.api('h4z90hkwgl')
   //   // video.bind('end', function() {
   //   // })
-    // })
+  // })
 </script>
 
 

@@ -66,8 +66,8 @@
       },
 
       translation (val) {
-        if (val == 'en') {
-          this.translationText = { 
+        if (val === 'en') {
+          this.translationText = {
             heading: 'Congratulations',
             btn1: 'Get Started'
           }

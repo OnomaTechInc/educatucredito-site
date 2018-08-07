@@ -89,7 +89,7 @@ a {
   // import axios from 'axios'
   // import {uuid} from 'vue-uuid'
   import jQuery from 'jquery'
-  import 'video.js/dist/video-js.css' 
+  import 'video.js/dist/video-js.css'
   import { videoPlayer } from 'vue-video-player'
   window.$ = window.jQuery = jQuery
   export default {
