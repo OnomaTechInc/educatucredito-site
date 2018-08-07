@@ -1,6 +1,6 @@
 <template>
   <v-container fluid id="aboutUs">
-    <header class="aboutUs">
+    <header class="mainHeader">
       <div class="container">
           <div class="heading text-center">
               <h3 class="text-uppercase" v-html="translationText.heading"></h3>

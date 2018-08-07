@@ -485,66 +485,25 @@ background-color: #3ea8d9;
 }
 /* for translate */
 
-/* about */
-.aboutus{
-  padding: 50px 0;
-  background-color: #f5f5f5;
-}
-.aboutus .about p{
-  font-size: 1.35rem;
-  line-height: 1.5;
-  margin: 15px 0;
-}
-.aboutus .list {
-  margin-bottom: 30px;
-}
-.aboutus .list ul{
-  padding-left: 30px;
-  list-style: square;
-}
-.aboutus .list ul li{
-  margin-bottom: 10px;
-}
-/* about */
-
-/* whyUS */
-  .whyUs{
-    padding: 50px 0;
-    background-color: #f5f5f5;
-  } 
-  .whyUs .info-box .row{
-    margin: 50px 0;
-  }
-  .whyUs .info-box p{
-    font-size: 1.35rem;
-    line-height: 1.5;
-    margin: 15px 0;
-  }
-  .whyUs .list {
-    margin-bottom: 30px;
-  }
-  .whyUs .list ul{
-    padding-left: 30px;
-    list-style: square;
-  }
-  .whyUs .list ul li{
-    margin-bottom: 10px;
-  }
-/* whyUS */
 
 
 /* aboutus */
-  #aboutUs header.aboutUs{
+  .mainHeader{
     position: relative;
     margin-top: 115px;
     height: 260px;
     margin-bottom: 30px;
-    background-image: url(../img/aboutus.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
   }
-  #aboutUs  header .heading{
+  #aboutUs header{
+    background-image: url(../img/aboutus.png);
+  }
+  #whyus header{
+    background-image: url(../img/whyus.png);
+  }
+  .mainHeader .heading{
     position: absolute;
     height: 74px;
     top: 0;
@@ -553,14 +512,14 @@ background-color: #3ea8d9;
     left: 0%;
     right: 0;
   }
-  header .heading h3{
+  .mainHeader .heading h3{
     font-size: 2.85rem;
     margin:0;
     margin-bottom: 10px;
     line-height: 1;
     color: white;
   }  
-  header .heading .lead{
+  .mainHeader .heading .lead{
     font-size: 1.65rem;;
     line-height: 1;
     color: white;
@@ -577,7 +536,7 @@ background-color: #3ea8d9;
   .aboutContent .pns .textOrange{
     color: #e3612e;
     text-transform: uppercase;
-    font-size: 27.99px;
+    font-size: 2.5rem;
     margin-bottom: 50px;
   }
   .aboutContent .pns ul{
@@ -625,7 +584,44 @@ background-color: #3ea8d9;
   }
 /* aboutus */
 
+/* why us */
+#whyUs .list{
+  max-width: 815px;
+  margin: 0 auto;
+}
+.whyUs .container p{
+  text-align: center;
+}
+.whyUs .container .list {
+  max-width: 830px;
+  margin: 0 auto;
+}
+.whyUs .container .list p{
+  margin: 0;
+  max-width: 830px;
+  text-align: left;
+  margin: 0 auto;
+}
+.whyUs .container .list ul li{
+  margin-top: 25px;
+}
+.whyUs .container .list ul li h4{
+  font-size: 16px;
+}
+.whyUs p a{
+  color: #e3612e;
+}
+/* why us */
 
+
+/* slider  */
+.v-carousel{
+  padding-bottom: 50px;
+}
+.v-btn--icon.v-btn--small{
+  width: 1% !important; 
+}
+/* slider  */
 
 @media only screen and (max-width:1263px){
   .contactdetails{
@@ -764,7 +760,7 @@ header.masthead, header.masthead2 {
 
 /* SECTION 3 */
   .section3 {
-    padding: 30px 0 50px;
+    padding: 30px 0 0;
     height: auto;
   }
   .section3 h1 {
