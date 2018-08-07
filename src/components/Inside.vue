@@ -55,8 +55,8 @@
       },
 
       translation (val) {
-        if (val == 'en') {
-          this.translationText = { 
+        if (val === 'en') {
+          this.translationText = {
             heading: 'Are you ready to Fix your Credit Score and Achieve Financial Freedom?',
             btn1: 'Get Started',
             btn2: 'More Info'

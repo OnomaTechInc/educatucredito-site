@@ -119,60 +119,86 @@
       <div class="container">
         <h1 v-html="translationText.section3h1"></h1>
         <h2 v-html="translationText.section3h2"></h2>
-        <div class="slider">
-          <div>
-            <h3 v-html="translationText.section3title1">1</h3>
-            <h4 v-html="translationText.section3desc1">1</h4>        
-          </div>
-          <div>
-            <h3 v-html="translationText.section3title2">2</h3>
-            <h4 v-html="translationText.section3desc2">2</h4>        
-          </div>
-          <div>
-            <h3 v-html="translationText.section3title3"></h3>
-            <h4 v-html="translationText.section3desc3"></h4>
-          </div>
-          <div>
-            <h3 v-html="translationText.section3title4"></h3>
-            <h4 v-html="translationText.section3desc4"></h4>
-          </div>
-          <div>
-            <h3 v-html="translationText.section3title5"></h3>
-            <h4 v-html="translationText.section3desc5"></h4>
-          </div>
-          <div>
-            <h3 v-html="translationText.section3title6"></h3>
-            <h4 v-html="translationText.section3desc6"></h4>
-          </div>
-          <div>
-            <h3 v-html="translationText.section3title7"></h3>
-            <h4 v-html="translationText.section3desc7"></h4>
-          </div>
-          <div>
-            <h3 v-html="translationText.section3title8"></h3>
-            <h4 v-html="translationText.section3desc8"></h4>
-          </div>
-          <div>
-            <h3 v-html="translationText.section3title9"></h3>
-            <h4 v-html="translationText.section3desc9"></h4>
-          </div>
-          <div>
-            <h3 v-html="translationText.section3title10"></h3>
-            <h4 v-html="translationText.section3desc10"></h4>
-          </div>
-          <div>
-            <h3 v-html="translationText.section3title11"></h3>
-            <h4 v-html="translationText.section3desc11"></h4>
-          </div>
-          <div>
-            <h3 v-html="translationText.section3title12"></h3>
-            <h4 v-html="translationText.section3desc12"></h4>
-          </div>
-          <div>
-            <h3 v-html="translationText.section3title13"></h3>
-            <h4 v-html="translationText.section3desc13"></h4>
-          </div>  
-        </div>
+        <v-carousel>
+          <v-carousel-item class="slider">
+            <div>
+              <h3 v-html="translationText.section3title1">1</h3>
+              <h4 v-html="translationText.section3desc1">1</h4>
+            </div>
+          </v-carousel-item>
+          <v-carousel-item>
+            <div>
+              <h3 v-html="translationText.section3title2">2</h3>
+              <h4 v-html="translationText.section3desc2">2</h4> 
+            </div>
+          </v-carousel-item>
+          <v-carousel-item>
+            <div>
+              <h3 v-html="translationText.section3title3">3</h3>
+              <h4 v-html="translationText.section3desc3">3</h4>        
+            </div>
+          </v-carousel-item>
+          <v-carousel-item>
+            <div>
+              <h3 v-html="translationText.section3title4"></h3>
+              <h4 v-html="translationText.section3desc4"></h4>
+            </div>
+          </v-carousel-item>
+          <v-carousel-item>
+            <div>
+              <h3 v-html="translationText.section3title5"></h3>
+              <h4 v-html="translationText.section3desc5"></h4>
+            </div>
+          </v-carousel-item>
+          <v-carousel-item>
+            <div>
+              <h3 v-html="translationText.section3title6"></h3>
+              <h4 v-html="translationText.section3desc6"></h4>
+            </div>
+          </v-carousel-item>
+          <v-carousel-item>
+            <div>
+              <h3 v-html="translationText.section3title7"></h3>
+              <h4 v-html="translationText.section3desc7"></h4>
+            </div>
+          </v-carousel-item>
+          <v-carousel-item>
+            <div>
+              <h3 v-html="translationText.section3title8"></h3>
+              <h4 v-html="translationText.section3desc8"></h4>
+            </div>
+          </v-carousel-item>
+          <v-carousel-item>
+            <div>
+              <h3 v-html="translationText.section3title9"></h3>
+              <h4 v-html="translationText.section3desc9"></h4>
+            </div>
+          </v-carousel-item>
+          <v-carousel-item>
+            <div>
+              <h3 v-html="translationText.section3title10"></h3>
+              <h4 v-html="translationText.section3desc10"></h4>
+            </div>
+          </v-carousel-item>
+          <v-carousel-item>
+            <div>
+              <h3 v-html="translationText.section3title11"></h3>
+              <h4 v-html="translationText.section3desc11"></h4>
+            </div>
+          </v-carousel-item>
+          <v-carousel-item>
+            <div>
+              <h3 v-html="translationText.section3title12"></h3>
+              <h4 v-html="translationText.section3desc12"></h4>
+            </div>
+          </v-carousel-item>
+          <v-carousel-item>
+            <div>
+              <h3 v-html="translationText.section3title13"></h3>
+              <h4 v-html="translationText.section3desc13"></h4>
+            </div>  
+          </v-carousel-item>
+        </v-carousel>
       </div>
     </section>
 
@@ -240,21 +266,38 @@
 
 <!-- Custom scripts for this template -->
 <style scoped>
+  .v-carousel {
+    box-shadow: none !important;
+    height: auto !important;
+    overflow: initial !important;
+  }
   .feature-item .text-muted {
     text-align: justify;
   }
 </style>
-
+<style>
+  .v-carousel__controls {
+    background: none !important;
+  }
+  .v-carousel__next button, .v-carousel__prev button {
+    background: #fff !important;
+    color: #000 !important;
+  }
+  .v-carousel__next button:hover, .v-carousel__prev button:hover {
+    background: #DF5F2D !important;
+    color: #fff !important;
+  }
+</style>
 <script>
-  var slider;
   import {uuid} from 'vue-uuid'
   import axios from 'axios'
-  var slider
+  import jQuery from 'jquery'
+  window.$ = window.jQuery = jQuery
   export default {
     data () {
       return {
         translationText: [],
-        questions:[],
+        questions: [],
         first_name: '',
         last_name: '',
         email_add: '',
@@ -275,17 +318,18 @@
       var d = this
       window._wq = window._wq || []
       // target our video by the first 3 characters of the hashed ID
-      _wq.push({ id: "h4z90hkwgl", onReady: function(video) {
-        // on play, seek the video to 10 seconds, then unbind so it
-        // only happens once.
-        video.bind('end', function(t) {
-          console.log("the video ended");
-          d.dialog = true
-          video.popover.hide();
-        })
-
-      }})
-
+      window._wq.push({
+        id: 'h4z90hkwgl',
+        onReady: function (video) {
+          // on play, seek the video to 10 seconds, then unbind so it
+          // only happens once.
+          video.bind('end', function (t) {
+            console.log('the video ended')
+            d.dialog = true
+            video.popover.hide()
+          })
+        }
+      })
     },
     watch: {
       '$parent.$parent.$parent.language' (v) {
@@ -293,9 +337,11 @@
       }
     },
     mounted () {
-      slider = $('.slider').bxSlider({
-        adaptiveHeight: true
-      })
+      // jQuery(function () {
+      //   jQuery('.slider').bxSlider({
+      //     adaptiveHeight: true
+      //   })
+      // })
     },
     computed: {
     },
@@ -342,7 +388,7 @@
             dis.rpassword = ''
             dis.rconfirm = ''
           } else {
-            d.$emit('receiveAlertMessage', {
+            dis.$emit('receiveAlertMessage', {
               body: 'Oops! something went wrong.',
               type: 'error',
               id: uuid.v4()
@@ -369,8 +415,8 @@
       },
 
       translation (val) {
-        if (val == 'en') {
-          this.translationText = { 
+        if (val === 'en') {
+          this.translationText = {
             section1h2: 'We believe all of us has a right',
             section1h3: 'A credit score is not just a number; it\'s a lifestyle. We will help you achieve  a good financial lifestyle. <br /> Our company of financial experts  believe we can make a significant change in your life.',
             section1h4: 'Register Now',
@@ -458,9 +504,9 @@
             section3desc7: 'Si usted es como la mayoría de las familias, generalmente se designa a una persona para manejar los aspectos financieros del hogar. O bien, si es soltero, puede ser la única persona que conoce el tipo y la ubicación de sus cuentas financieras. ¿Qué pasa si sus seres queridos de repente se encuentran en la posición de hacerse cargo de sus finanzas sin previo aviso? ¿Podrían ubicar registros de seguros, bancos y financieros en caso de una emergencia? My Financial Lockbox es una solución en línea que le permite almacenar datos financieros en una ubicación única, segura y protegida por contraseña para que usted o sus seres queridos puedan acceder fácilmente y seleccionar y autorizar',
             section3desc8: 'Si fallece inesperadamente, la pérdida de su apoyo financiero puede dejar una gran carga sobre los hombros de sus seres queridos. El seguro de vida puede mantener el impacto al mínimo reemplazando una parte de los ingresos perdidos y ayudando a mantener el nivel de vida actual de sus seres queridos. Características específicas Asistir con servicios médicos y funerarios Puede dejar los gastos médicos sin seguro, además del gasto de los servicios funerarios. En un momento emocional y difícil, su seguro de vida se puede utilizar para cubrir estos gastos sin dificultades financieras o estrés adicional.',
             section3desc9: 'Cuando se trata de su salud y sus activos, está acostumbrado a estar a cargo. Las decisiones que toma para usted y su familia son importantes porque sabe lo que es mejor para usted. desafortunadamente, en caso de que no pueda hablar en nombre de estas decisiones, alguien que no comprende sus deseos puede terminar haciéndolos por usted. Sin un plan de sucesión, estas opciones cruciales con respecto a SU salud, SUS finanzas y SU familia están repentinamente fuera de su control.',
-            section3desc10: 'Voluntad perdida<br />Su última voluntad establece cómo desea que sus activos se distribuyan entre sus herederos después de su muerte. Esto también puede incluir a quién designaría como tutor para sus hijos menores una vez incapaces. Sin especificar esta información en un documento oficial firmado, el Estado distribuirá su propiedad como ELLOS lo consideren oportuno.<br />Confianza de vida<br />Lo que se coloca en su fideicomiso en vida se puede modificar a lo largo de su vida y, a su fallecimiento, se transferirá a quien designe como Fideicomisario. Con un fideicomiso en vida, mantendrá la privacidad de la distribución de sus activos y evitará los costos del tribunal de sucesiones.<br />Poder de atención médica<br /> Este documento nombra a alguien para que sea su agente de atención médica, a veces denominado representante representante o defensor del paciente. ', 
-            section3desc11: 'Simplemente navegue por las ofertas disponibles en nuestros minoristas o busque un producto específico. Cuando esté listo para ganar recompensas, simplemente haga clic en el minorista a través de nuestro enlace y complete su compra. Puede comprar buscando Tiendas, Ofertas o Productos. Cada vez que compra en cualquiera de nuestros 4,000 minoristas, se le recompensa por nuestra venta generada a través de ese proveedor. Su experiencia de compra es simple: utiliza exactamente el mismo sitio web que su minorista favorito, pero le permite obtener beneficios de devolución de efectivo. ¿Quieres descuentos adicionales? A menudo ofrecemos códigos de cupones adicionales para copiar y pegar en el proceso de pago.', 
-            section3desc12: 'FamilyMint es una galardonada aplicación de gestión de dinero y establecimiento de metas en línea que ofrece una manera atractiva para que los niños aprendan la responsabilidad financiera. Es fácil de usar para los niños, les permite conectar su dinero con el significado del mundo real, y lo más importante, aprender haciendo. Su membresía en el Plan de protección FES le da acceso a las interfaces web y móviles FamilyMint de YFL, proporciona un "fragmento" de boletín financiero trimestral para niños, así como información detallada sobre cómo llevar el programa Libro de trabajo FamilyMint al aula de su hijo.', 
+            section3desc10: 'Voluntad perdida<br />Su última voluntad establece cómo desea que sus activos se distribuyan entre sus herederos después de su muerte. Esto también puede incluir a quién designaría como tutor para sus hijos menores una vez incapaces. Sin especificar esta información en un documento oficial firmado, el Estado distribuirá su propiedad como ELLOS lo consideren oportuno.<br />Confianza de vida<br />Lo que se coloca en su fideicomiso en vida se puede modificar a lo largo de su vida y, a su fallecimiento, se transferirá a quien designe como Fideicomisario. Con un fideicomiso en vida, mantendrá la privacidad de la distribución de sus activos y evitará los costos del tribunal de sucesiones.<br />Poder de atención médica<br /> Este documento nombra a alguien para que sea su agente de atención médica, a veces denominado representante representante o defensor del paciente. ',
+            section3desc11: 'Simplemente navegue por las ofertas disponibles en nuestros minoristas o busque un producto específico. Cuando esté listo para ganar recompensas, simplemente haga clic en el minorista a través de nuestro enlace y complete su compra. Puede comprar buscando Tiendas, Ofertas o Productos. Cada vez que compra en cualquiera de nuestros 4,000 minoristas, se le recompensa por nuestra venta generada a través de ese proveedor. Su experiencia de compra es simple: utiliza exactamente el mismo sitio web que su minorista favorito, pero le permite obtener beneficios de devolución de efectivo. ¿Quieres descuentos adicionales? A menudo ofrecemos códigos de cupones adicionales para copiar y pegar en el proceso de pago.',
+            section3desc12: 'FamilyMint es una galardonada aplicación de gestión de dinero y establecimiento de metas en línea que ofrece una manera atractiva para que los niños aprendan la responsabilidad financiera. Es fácil de usar para los niños, les permite conectar su dinero con el significado del mundo real, y lo más importante, aprender haciendo. Su membresía en el Plan de protección FES le da acceso a las interfaces web y móviles FamilyMint de YFL, proporciona un "fragmento" de boletín financiero trimestral para niños, así como información detallada sobre cómo llevar el programa Libro de trabajo FamilyMint al aula de su hijo.',
             section3desc13: 'Reduzca sus gastos de bolsillo de medicamentos recetados, con descuentos que van del 10% al 85% en la mayoría de los medicamentos. Presente su tarjeta de membresía junto con sus recetas a su farmacéutico y solicite comparar el precio de descuento contratado con el precio minorista de la farmacia cuando se procesa la receta. Usted paga el menor de los dos precios directamente a la farmacia en el punto de venta, independientemente de las promociones y descuentos.',
             contactus: 'CONTÁCTENOS',
             location: 'Ubicación',
@@ -487,9 +533,9 @@
       }
     },
     components: {
+      // bxSlider
     }
   }
-
 </script>
 <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
 <style type="text/css">

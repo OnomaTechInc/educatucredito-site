@@ -15,7 +15,7 @@ import MoreInfo from '@/components/MoreInfo'
 
 Vue.use(Router)
 
-function requireAuth(to, from, next) {
+function requireAuth (to, from, next) {
   var authenticated = localStorage.getItem('session')
   if (authenticated === null) {
     next({
@@ -32,105 +32,105 @@ function requireAuth(to, from, next) {
 export default new Router({
   mode: 'hash',
   routes: [{
-      path: '/',
-      name: 'Landing',
-      component: Landing,
-      meta: {
-        plainLayout: true
-      }
-    },
-    {
-      path: '/home',
-      name: 'Home',
-      component: Landing,
-      meta: {
-        plainLayout: true
-      }
-    },
-    {
-      path: '/why-choose-us',
-      name: 'WhyUs',
-      component: WhyUs,
-      meta: {
-        plainLayout: true
-      }
-    },
-    {
-      path: '/inside',
-      name: 'Inside',
-      component: Inside,
-      meta: {
-        plainLayout: true
-      }
-    },
-    {
-      path: '/moreinfo',
-      name: 'MoreInfo',
-      component: MoreInfo,
-      meta: {
-        plainLayout: true
-      }
-    },
-    {
-      path: '/about-us',
-      name: 'AboutUs',
-      component: AboutUs,
-      meta: {
-        plainLayout: true
-      }
-    },
-    {
-      path: '/login',
-      name: 'Login',
-      component: Login,
-      meta: {
-        plainLayout: true
-      }
-    },
-    {
-      path: '/register',
-      name: 'Register',
-      component: Register,
-      meta: {
-        plainLayout: true
-      }
-    },
-    {
-      path: '/logout',
-      name: 'Logout',
-      component: Login,
-      meta: {
-        plainLayout: true
-      }
-    },
-    {
-      path: '/dashboard',
-      name: 'Dashboard',
-      component: Dashboard,
-      beforeEnter: requireAuth
-    },
-    {
-      path: '/profile',
-      name: 'Profile',
-      component: Profile,
-      beforeEnter: requireAuth
-    },
-    {
-      path: '/files',
-      name: 'Files',
-      component: Files,
-      beforeEnter: requireAuth
-    },
-    {
-      path: '/videos',
-      name: 'Videos',
-      component: Videos,
-      beforeEnter: requireAuth
-    },
-    {
-      path: '*',
-      name: 'PageNotFound',
-      component: PageNotFound
+    path: '/',
+    name: 'Landing',
+    component: Landing,
+    meta: {
+      plainLayout: true
     }
+  },
+  {
+    path: '/home',
+    name: 'Home',
+    component: Landing,
+    meta: {
+      plainLayout: true
+    }
+  },
+  {
+    path: '/why-choose-us',
+    name: 'WhyUs',
+    component: WhyUs,
+    meta: {
+      plainLayout: true
+    }
+  },
+  {
+    path: '/inside',
+    name: 'Inside',
+    component: Inside,
+    meta: {
+      plainLayout: true
+    }
+  },
+  {
+    path: '/moreinfo',
+    name: 'MoreInfo',
+    component: MoreInfo,
+    meta: {
+      plainLayout: true
+    }
+  },
+  {
+    path: '/about-us',
+    name: 'AboutUs',
+    component: AboutUs,
+    meta: {
+      plainLayout: true
+    }
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: Login,
+    meta: {
+      plainLayout: true
+    }
+  },
+  {
+    path: '/register',
+    name: 'Register',
+    component: Register,
+    meta: {
+      plainLayout: true
+    }
+  },
+  {
+    path: '/logout',
+    name: 'Logout',
+    component: Login,
+    meta: {
+      plainLayout: true
+    }
+  },
+  {
+    path: '/dashboard',
+    name: 'Dashboard',
+    component: Dashboard,
+    beforeEnter: requireAuth
+  },
+  {
+    path: '/profile',
+    name: 'Profile',
+    component: Profile,
+    beforeEnter: requireAuth
+  },
+  {
+    path: '/files',
+    name: 'Files',
+    component: Files,
+    beforeEnter: requireAuth
+  },
+  {
+    path: '/videos',
+    name: 'Videos',
+    component: Videos,
+    beforeEnter: requireAuth
+  },
+  {
+    path: '*',
+    name: 'PageNotFound',
+    component: PageNotFound
+  }
   ]
 })
