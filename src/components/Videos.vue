@@ -10,16 +10,7 @@
         <v-container pl-3 pr-3>
           <v-card flat>
             <v-card-title>
-              <v-flex xs12 sm12 md8 lg9>
-                <video-player
-                  class="video-player-box"
-                  ref="videoPlayer"
-                  :options="playerOptions"
-                  :playsinline="true"
-                >
-                </video-player>
-              </v-flex>
-              <v-flex xs12 sm12 md4 lg3>
+              <v-flex xs12 sm12 md4 lg4>
                 <v-list two-line>
                   <v-subheader>
                     Playlist
@@ -41,6 +32,15 @@
                     </v-list-tile>
                   </template>
                 </v-list>
+              </v-flex>
+              <v-flex xs12 sm12 md8 lg8>
+                <video-player
+                  class="video-player-box"
+                  ref="videoPlayer"
+                  :options="playerOptions"
+                  :playsinline="true"
+                >
+                </video-player>
               </v-flex>
             </v-card-title>
           </v-card>

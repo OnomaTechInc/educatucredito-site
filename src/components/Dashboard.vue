@@ -10,7 +10,7 @@
               <p>Thank you!</p>
             </v-flex>
             <v-card-title>
-              <v-flex xs12 sm12 md12 lg12>
+              <v-flex xs12 sm12 md12 lg6>
                 <video-player
                   class="video-player-box"
                   ref="videoPlayer"
@@ -18,8 +18,10 @@
                   :playsinline="true"
                 >
                 </video-player>
+              </v-flex >
+              <v-flex xs12 sm12 md12 lg6>
+                <iframe src="https://www.financialeducationservices.com/AgentEnroll.aspx?rid=kfernandez"></iframe>
               </v-flex>
-
             </v-card-title>
           </v-card>
           <v-divider></v-divider>
