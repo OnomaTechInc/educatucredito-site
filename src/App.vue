@@ -170,7 +170,7 @@
               <li class="">
                 <a class="" href="/#/about-us">{{ link.aboutus }}</a>
               </li>
-              <li class="nav-item">
+              <li class="">
                 <a class="nav-link js-scroll-trigger" href="https://blog.educatucredito.com">Blogs</a>
               </li>
               <li class="">
@@ -254,7 +254,7 @@
     data () {
       return {
         sheet: true,
-        dialog:true,
+        dialog: false,
         direction: 'top',
         fab: false,
         fling: false,
@@ -272,7 +272,6 @@
         alertMessage: '',
         showAlertNotification: false,
         alertNotifications: [],
-        cordova: Vue.cordova,
         clipped: false,
         drawer: true,
         cordova: Vue.cordova,
@@ -283,7 +282,7 @@
         title: 'Educa Tu Credito',
         name: 'John Wick',
         userImage: 'https://randomuser.me/api/portraits/men/41.jpg',
-        toggle: 1,
+        toggle: 1
       }
     },
     created () {
@@ -300,9 +299,11 @@
       })
       // this.setDefaultLanguage(this.language)
       var defaultLang = window.localStorage.getItem('language')
-      if (defaultLang !== null || defaultLang !== undefined) {
+      if (defaultLang !== null && defaultLang !== undefined) {
         this.language = defaultLang
         this.setDefaultLanguage(this.language)
+      } else {
+        this.dialog = true
       }
     },
     watch: {
@@ -322,7 +323,7 @@
     },
     methods: {
       setDefaultLanguage (val) {
-        if (val == 'en') {
+        if (val === 'en') {
           this.language = 'en'
           this.link = {
             home: 'Home',

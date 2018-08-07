@@ -119,60 +119,86 @@
       <div class="container">
         <h1 v-html="translationText.section3h1"></h1>
         <h2 v-html="translationText.section3h2"></h2>
-        <div class="slider">
+        <v-carousel>
+          <v-carousel-item class="slider">
           <div>
             <h3 v-html="translationText.section3title1">1</h3>
             <h4 v-html="translationText.section3desc1">1</h4>        
           </div>
+          </v-carousel-item>
+          <v-carousel-item>
           <div>
             <h3 v-html="translationText.section3title2">2</h3>
             <h4 v-html="translationText.section3desc2">2</h4>        
           </div>
+          </v-carousel-item>
+          <v-carousel-item>
           <div>
-            <h3 v-html="translationText.section3title3"></h3>
-            <h4 v-html="translationText.section3desc3"></h4>
+              <h3 v-html="translationText.section3title3">3</h3>
+              <h4 v-html="translationText.section3desc3">3</h4>        
           </div>
+          </v-carousel-item>
+          <v-carousel-item>
           <div>
             <h3 v-html="translationText.section3title4"></h3>
             <h4 v-html="translationText.section3desc4"></h4>
           </div>
-          <div>
-            <h3 v-html="translationText.section3title5"></h3>
+          </v-carousel-item>
+          <v-carousel-item>
+            <div>
+              <h3 v-html="translationText.section3title5"></h3>
             <h4 v-html="translationText.section3desc5"></h4>
           </div>
-          <div>
-            <h3 v-html="translationText.section3title6"></h3>
+          </v-carousel-item>
+          <v-carousel-item>
+            <div>
+              <h3 v-html="translationText.section3title6"></h3>
             <h4 v-html="translationText.section3desc6"></h4>
           </div>
+          </v-carousel-item>
+          <v-carousel-item>
           <div>
             <h3 v-html="translationText.section3title7"></h3>
             <h4 v-html="translationText.section3desc7"></h4>
           </div>
+          </v-carousel-item>
+          <v-carousel-item>
           <div>
             <h3 v-html="translationText.section3title8"></h3>
             <h4 v-html="translationText.section3desc8"></h4>
           </div>
+          </v-carousel-item>
+          <v-carousel-item>
           <div>
             <h3 v-html="translationText.section3title9"></h3>
             <h4 v-html="translationText.section3desc9"></h4>
           </div>
+          </v-carousel-item>
+          <v-carousel-item>
           <div>
             <h3 v-html="translationText.section3title10"></h3>
             <h4 v-html="translationText.section3desc10"></h4>
           </div>
-          <div>
-            <h3 v-html="translationText.section3title11"></h3>
+          </v-carousel-item>
+          <v-carousel-item>
+            <div>
+              <h3 v-html="translationText.section3title11"></h3>
             <h4 v-html="translationText.section3desc11"></h4>
           </div>
+          </v-carousel-item>
+          <v-carousel-item>
           <div>
             <h3 v-html="translationText.section3title12"></h3>
             <h4 v-html="translationText.section3desc12"></h4>
           </div>
+          </v-carousel-item>
+          <v-carousel-item>
           <div>
             <h3 v-html="translationText.section3title13"></h3>
             <h4 v-html="translationText.section3desc13"></h4>
           </div>  
-        </div>
+          </v-carousel-item>
+        </v-carousel>
       </div>
     </section>
 
@@ -240,20 +266,38 @@
 
 <!-- Custom scripts for this template -->
 <style scoped>
+  .v-carousel {
+    box-shadow: none !important;
+    height: auto !important;
+    overflow: initial !important;
+  }
   .feature-item .text-muted {
     text-align: justify;
   }
 </style>
-
+<style>
+  .v-carousel__controls {
+    background: none !important;
+  }
+  .v-carousel__next button, .v-carousel__prev button {
+    background: #fff !important;
+    color: #000 !important;
+  }
+  .v-carousel__next button:hover, .v-carousel__prev button:hover {
+    background: #DF5F2D !important;
+    color: #fff !important;
+  }
+</style>
 <script>
   import {uuid} from 'vue-uuid'
   import axios from 'axios'
-  var slider
+  import jQuery from 'jquery'
+  window.$ = window.jQuery = jQuery
   export default {
     data () {
       return {
         translationText: [],
-        questions:[],
+        questions: [],
         first_name: '',
         last_name: '',
         email_add: '',
@@ -274,17 +318,18 @@
       var d = this
       window._wq = window._wq || []
       // target our video by the first 3 characters of the hashed ID
-      _wq.push({ id: "h4z90hkwgl", onReady: function(video) {
+      window._wq.push({
+        id: 'h4z90hkwgl',
+        onReady: function (video) {
         // on play, seek the video to 10 seconds, then unbind so it
         // only happens once.
-        video.bind('end', function(t) {
-          console.log("the video ended");
+          video.bind('end', function (t) {
+          console.log('the video ended')
           d.dialog = true
-          video.popover.hide();
+          video.popover.hide()
         })
-
-      }})
-
+        }
+      })
     },
     watch: {
       '$parent.$parent.$parent.language' (v) {
@@ -292,9 +337,11 @@
       }
     },
     mounted () {
-      slider = $('.slider').bxSlider({
-        adaptiveHeight: true
-      })
+      // jQuery(function () {
+      //   jQuery('.slider').bxSlider({
+      //     adaptiveHeight: true
+      //   })
+      // })
     },
     computed: {
     },
@@ -341,7 +388,7 @@
             dis.rpassword = ''
             dis.rconfirm = ''
           } else {
-            d.$emit('receiveAlertMessage', {
+            dis.$emit('receiveAlertMessage', {
               body: 'Oops! something went wrong.',
               type: 'error',
               id: uuid.v4()
@@ -368,8 +415,8 @@
       },
 
       translation (val) {
-        if (val == 'en') {
-          this.translationText = { 
+        if (val === 'en') {
+          this.translationText = {
             section1h2: 'We believe all of us has a right',
             section1h3: 'A credit score is not just a number; it\'s a lifestyle. We will help you achieve  a good financial lifestyle. <br /> Our company of financial experts  believe we can make a significant change in your life.',
             section1h4: 'Register Now',
@@ -486,9 +533,9 @@
       }
     },
     components: {
+      // bxSlider
     }
   }
-
 </script>
 <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
 <style type="text/css">

@@ -4,8 +4,13 @@
       <v-layout column align-center>
         <v-container pl-3 pr-3>
           <v-card flat>
+            <v-flex xs12 sm12 md12 lg12 p-5 text-center>
+              <p>Welcome note:</p>
+              <p>Lorem ipsum dolor set amet</p>
+              <p>Thank you!</p>
+            </v-flex>
             <v-card-title>
-              <v-flex xs12 sm12 md8 lg9>
+              <v-flex xs12 sm12 md12 lg12>
                 <video-player
                   class="video-player-box"
                   ref="videoPlayer"
@@ -14,11 +19,7 @@
                 >
                 </video-player>
               </v-flex>
-              <v-flex xs12 sm12 md4 lg3 p-5>
-                <p>Welcome note:</p>
-                <p>Lorem ipsum dolor set amet</p>
-                <p>Thank you!</p>
-              </v-flex>
+
             </v-card-title>
           </v-card>
           <v-divider></v-divider>
@@ -32,7 +33,7 @@
                 grid-list-lg
               >
                 <v-layout row wrap>
-                  <v-flex xs12>
+                  <v-flex xs12 sm4>
                     <v-card color="blue-grey darken-2" class="white--text">
                       <v-card-title primary-title>
                         <div class="headline">Unlimited music now</div>
@@ -44,7 +45,7 @@
                     </v-card>
                   </v-flex>
 
-                  <v-flex xs12>
+                  <v-flex xs12 sm4>
                     <v-card color="cyan darken-2" class="white--text">
                       <v-layout>
                         <v-flex xs5>
@@ -72,7 +73,7 @@
                     </v-card>
                   </v-flex>
 
-                  <v-flex xs12>
+                  <v-flex xs12 sm4>
                     <v-card color="purple" class="white--text">
                       <v-layout row>
                         <v-flex xs7>
