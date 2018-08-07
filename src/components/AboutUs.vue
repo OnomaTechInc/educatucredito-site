@@ -36,48 +36,6 @@
         </div>
       </div>
     </section>
-    <!-- <header class="masthead3">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 my-auto">
-            <div class="header-content mx-auto">
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </header> -->
-    <!-- <section class="aboutus">
-      <div class="container">
-        <div class="about">
-          <h1 v-html="translationText.heading" class="text-uppercase"></h1>
-          <p v-html="translationText.aboutp1"></p>
-          <p v-html="translationText.aboutp2"></p>
-          <p v-html="translationText.aboutp3"></p>
-          <p v-html="translationText.aboutp4"></p>
-          <p v-html="translationText.aboutp5"></p>
-        </div>
-        <div class="list">
-          <ul>
-            <li><h4 v-html="translationText.list1"></h4></li>
-            <li><h4 v-html="translationText.list2"></h4></li>
-            <li><h4 v-html="translationText.list3"></h4></li>
-            <li><h4 v-html="translationText.list4"></h4></li>
-            <li><h4 v-html="translationText.list5"></h4></li>
-            <li><h4 v-html="translationText.list6"></h4></li>
-            <li><h4 v-html="translationText.list7"></h4></li>
-            <li><h4 v-html="translationText.list8"></h4></li>
-            <li><h4 v-html="translationText.list9"></h4></li>
-            <li><h4 v-html="translationText.list10"></h4></li>
-            <li><h4 v-html="translationText.list11"></h4></li>
-            <li><h4 v-html="translationText.list12"></h4></li>
-          </ul>
-        </div>
-        <div class="about">
-          <p v-html="translationText.aboutp6"></p>
-        </div>
-      </div>
-    </section> -->
   </v-container>
 </template>
 
