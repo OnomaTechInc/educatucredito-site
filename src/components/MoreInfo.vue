@@ -62,7 +62,7 @@
     },
     methods: {
       gestarted () {
-        this.$router.replace({ name: 'Register' })
+        this.$router.replace({ path: '/user/#/register' })
       },
 
       translation (val) {
