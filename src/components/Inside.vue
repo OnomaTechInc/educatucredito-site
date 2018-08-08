@@ -16,8 +16,8 @@
                 <!-- <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><iframe src="https://fast.wistia.net/embed/iframe/h4z90hkwgl?videoFoam=true" title="Wistia video player" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="100%" height="100%"></iframe></div></div> -->
 
                 <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><span class="wistia_embed wistia_async_xbiw6z7e9l popover=true popoverAnimateThumbnail=true videoFoam=true" style="display:inline-block;height:100%;position:relative;width:100%">&nbsp;</span></div></div>
-                <v-btn class="primary" v-html="translationText.btn1" @click="gestarted"></v-btn>
-                <v-btn class="" v-html="translationText.btn2" @click="moreinfo"></v-btn>
+                <v-btn class="primary" v-html="translationText.btn1" to="/user/#/register"></v-btn>
+                <v-btn class="" v-html="translationText.btn2" to="/user/#/moreinfo"></v-btn>
             </div>
         </div>
       </div>
@@ -46,14 +46,6 @@
       }
     },
     methods: {
-      gestarted () {
-        this.$router.replace({ path: '/user/#/register' })
-      },
-
-      moreinfo () {
-        this.$router.replace({ path: '/user/#/moreinfo' })
-      },
-
       translation (val) {
         if (val === 'en') {
           this.translationText = {
