@@ -1,7 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Login from '@/components/Login'
-import Register from '@/components/Register'
 import PageNotFound from '@/components/404'
 import Landing from '@/components/Landing'
 import AboutUs from '@/components/AboutUs'
@@ -70,30 +68,6 @@ export default new Router({
     path: '/about-us',
     name: 'AboutUs',
     component: AboutUs,
-    meta: {
-      plainLayout: true
-    }
-  },
-  {
-    path: '/login',
-    name: 'Login',
-    component: Login,
-    meta: {
-      plainLayout: true
-    }
-  },
-  {
-    path: '/register',
-    name: 'Register',
-    component: Register,
-    meta: {
-      plainLayout: true
-    }
-  },
-  {
-    path: '/logout',
-    name: 'Logout',
-    component: Login,
     meta: {
       plainLayout: true
     }
