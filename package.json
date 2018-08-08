@@ -20,11 +20,8 @@
   },
   "dependencies": {
     "@sinonjs/formatio": "^2.0.0",
-    "@xkeshi/image-compressor": "^0.5.3",
     "axios": "^0.18.0",
-    "bxslider": "^4.2.14",
     "cordova-plugin-device": "^2.0.2",
-    "cropperjs": "^1.4.1",
     "eslint-config-standard": "^11.0.0",
     "eslint-friendly-formatter": "^4.0.1",
     "eslint-plugin-import": "^2.13.0",
@@ -38,11 +35,9 @@
     "vue-cordova": "^0.1.2",
     "vue-head": "^2.0.12",
     "vue-router": "^3.0.1",
-    "vue-upload-component": "^2.8.11",
     "vue-uuid": "^1.0.0",
     "vue-video-player": "^5.0.2",
     "vuetify": "^1.0.18",
-    "vuetify-upload-button": "^0.1.2",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
