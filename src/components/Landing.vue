@@ -348,7 +348,7 @@
     methods: {
       sendContact () {
         var dis = this
-        axios.post(`https://www.educatucredito.com/mailer.php'`, {
+        axios.post(`https://www.educatucredito.com/mailer.php`, {
           name: dis.cname,
           email: dis.cemail,
           subject: dis.csubject,

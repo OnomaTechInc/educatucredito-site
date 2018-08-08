@@ -1,7 +1,9 @@
 body{
   font-size: 16px;
 }
-
+body >h2{
+  display: none;
+}
 .contactdetails{
 margin-left: 24px;
     font-size: 20px;
@@ -113,8 +115,7 @@ span.asterisk {
   width: 300px;
   padding: 10px 24px;
   height: 435px;
-  opacity: 0.5;
-  background-color: #000000;
+  background-color: rgba(0,0,0,0.5);
 }
 #registerform input[type="text"],
 #registerform input[type="email"] {
@@ -625,6 +626,94 @@ background-color: #3ea8d9;
 }
 /* slider  */
 
+/* Dashboard */
+#dashboard .text-underline{
+  padding-bottom: 5px;
+  border-bottom: 1px solid #a3a3a3;
+}
+#dashboard .heading{
+  padding: 30px 0;
+  font-size: 49px;
+  color: #3ea8d9;
+  font-weight: 800;
+}
+#dashboard ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+#dashboard .btnOptions ul{
+  margin: 30px 0 0;
+}
+#dashboard ul li{
+  display: inline-block;
+  position: relative;
+  margin: 0;
+}
+#dashboard ul li:not(:first-child){
+  padding-left: 58px;
+}
+#dashboard ul li:before{
+  position: absolute;
+  content: '';
+  width:1px;
+  height: 49px;
+  background-color: #a3a3a3;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+#dashboard ul li:first-child:before{
+  display: none;
+}
+#dashboard ul li a{
+  display: block;
+  width: 139px;
+  text-align: center;
+  line-height:36px;
+  background:url(../img/btn.png);
+  background-repeat:no-repeat;
+  color: white;
+  text-transform: uppercase;
+}
+#dashboard .profile{
+  padding-left: 30px;
+  width: 108px;
+  height: 108px;
+  border-radius: 50%;
+  background-color: #2f92d3;
+}
+#dashboard .profileInfo{
+  padding-left: 44px;
+  margin:50px 0;
+}
+#dashboard .profileInfo h3{
+  color: #3ea8d9;
+  font-size: 25px;
+}
+#dashboard .profileInfo ul li{
+  padding-right: 15px;
+  padding-bottom: 10px;
+  border-bottom:1px solid #a3a3a3;
+}
+#dashboard .profileInfo li:before{
+  display:none;
+}
+#dashboard .videoHolder .v-card__title{
+  padding-left: 0;
+}
+#dashboard .desc{
+  padding-left: 40px;
+}
+#dashboard .desc h3{
+  border-bottom: 2px solid #2b2c2c;
+  display: inline-block;
+}
+
+/* Dashboard */
+
+
 @media only screen and (max-width:1263px){
   .contactdetails{
     display: none;
@@ -635,7 +724,50 @@ section{
   height: auto !important;
   padding-bottom: 0;
 }
+/* dashboard  */
+.v-avatar{
+  margin: 0 auto;
+  margin-top: 30px;
+}
+#dashboard .profileInfo{
+  display:block;
+  width: 100%;
+  text-align: center;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+#dashboard .profileInfo ul{
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+#dashboard .profileInfo ul li{
+  text-align: center;
+  padding: 0;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  border-bottom: 0;
+  position: relative;
+  padding-bottom: 5px;
+}
+#dashboard .profileInfo ul li:after{
+  position: absolute;
+  content:'';
+  width: 180px;
+  height: 1px;
+  background-color: #a3a3a3;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+#dashboard .desc{
+  padding-left: 0;
+  margin-top:30px;
+}
 
+/* dashboard  */
 /* MAINNAV */
 #mainNav{
   padding: 8px 0;
@@ -699,7 +831,27 @@ header.masthead{
 }
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
-
+/* dashboard  */
+#dashboard .btnOptions ul li{
+  display: block;
+  padding-left: 0;
+  text-align: center;
+  padding-bottom: 10px;
+}
+#dashboard .btnOptions ul li a{
+  display: inline-block;
+}
+#dashboard .btnOptions ul li:before{
+  display: block;
+  height: 1px;
+  width: 30px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 15px;
+  top:100%;
+}
+/* dashboard  */
 .contactdetails2,
 .footernav,
 .copyright-reserved {

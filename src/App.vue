@@ -19,19 +19,19 @@
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="/#/home">{{ link.home }}</a>
+                <a class="nav-link js-scroll-trigger" href="/home">{{ link.home }}</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="/#/about-us">{{ link.aboutus }}</a>
+                <a class="nav-link js-scroll-trigger" href="/about-us">{{ link.aboutus }}</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="https://blog.educatucredito.com">Blogs</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="/#/why-choose-us">{{ link.whyus }}</a>
+                <a class="nav-link js-scroll-trigger" href="/why-choose-us">{{ link.whyus }}</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link js-scroll-trigger" href="/#/login">{{ link.login }}</a>
+                  <a class="nav-link js-scroll-trigger" href="/user/login">{{ link.login }}</a>
               </li>
             </ul>
           </div>
@@ -82,19 +82,19 @@
           </div>
             <ul class="footernav">
               <li class="">
-                <a class="" href="/#/home">{{ link.home }}</a>
+                <a class="" href="/home">{{ link.home }}</a>
               </li>
               <li class="">
-                <a class="" href="/#/about-us">{{ link.aboutus }}</a>
+                <a class="" href="/about-us">{{ link.aboutus }}</a>
               </li>
               <li class="">
                 <a class="nav-link js-scroll-trigger" href="https://blog.educatucredito.com">Blogs</a>
               </li>
               <li class="">
-                <a class="" href="/#/why-choose-us">{{ link.whyus }}</a>
+                <a class="" href="/why-choose-us">{{ link.whyus }}</a>
               </li>
               <li class="">
-                  <a class="" href="/#/login">{{ link.login }}</a>
+                  <a class="" href="/user/login">{{ link.login }}</a>
                 </li>
             </ul>
         </div>
