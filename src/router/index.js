@@ -6,6 +6,7 @@ import AboutUs from '@/components/AboutUs'
 import WhyUs from '@/components/WhyUs'
 import Inside from '@/components/Inside'
 import MoreInfo from '@/components/MoreInfo'
+import Funnel from '@/components/Funnel'
 
 Vue.use(Router)
 
@@ -27,39 +28,32 @@ export default new Router({
   routes: [{
     path: '/',
     name: 'Landing',
-    component: Landing,
-    meta: {
-      plainLayout: true
-    }
+    component: Landing
   },
   {
     path: '/home',
     name: 'Home',
-    component: Landing,
-    meta: {
-      plainLayout: true
-    }
+    component: Landing
   },
   {
     path: '/why-choose-us',
     name: 'WhyUs',
-    component: WhyUs,
-    meta: {
-      plainLayout: true
-    }
+    component: WhyUs
   },
   {
     path: '/inside',
     name: 'Inside',
-    component: Inside,
-    meta: {
-      plainLayout: true
-    }
+    component: Inside
   },
   {
     path: '/moreinfo',
     name: 'MoreInfo',
-    component: MoreInfo,
+    component: MoreInfo
+  },
+  {
+    path: '/funnel',
+    name: 'Funnel',
+    component: Funnel,
     meta: {
       plainLayout: true
     }
@@ -67,10 +61,7 @@ export default new Router({
   {
     path: '/about-us',
     name: 'AboutUs',
-    component: AboutUs,
-    meta: {
-      plainLayout: true
-    }
+    component: AboutUs
   },
   {
     path: '*',

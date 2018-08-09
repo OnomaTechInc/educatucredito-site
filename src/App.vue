@@ -1,6 +1,24 @@
 <template>
   <v-app light>
     <v-content v-if="$route.meta.plainLayout">
+      <div class="alert_container">
+        <v-alert 
+          class="notification" 
+          v-if="alertNotifications"
+          value="showAlertNotification" 
+          v-for="alertNotification in alertNotifications" 
+          :key="alertNotification.id" 
+          transition="fade-transition" 
+          :type="alertNotification.type"
+        >
+          {{ alertNotification.body }}
+          <a class="alert__dismissible" @click="closeAlert(alertNotification.id)"><i aria-hidden="true" class="icon icon--right material-icons">cancel</i></a>
+        </v-alert>
+      </div>
+      <router-view @setRoleName="processNameRole" @receiveAlertMessage="alertMessage = $event"/>
+      <ConfirmDialog/>
+    </v-content>
+    <v-content v-else>
       <!-- Navigation -->
       <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <div class="container">
