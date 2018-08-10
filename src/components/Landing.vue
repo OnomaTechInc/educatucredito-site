@@ -404,7 +404,7 @@
             pl14: 'Health Insurance',
             feats: 'Primary Features',
             mTitlte:'Thank you!',
-            mBody:'thank you for reviewing our opportunity video, pleaseclick below for more info, or to subscribe'
+            mBody:'thank you for reviewing our opportunity video, click the button below to subscribe'
           }
         } else if (val === 'es') {
           this.translationText = {
