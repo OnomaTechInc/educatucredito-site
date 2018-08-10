@@ -1,6 +1,5 @@
 <template>
   <v-container fluid>
-
     <header class="masthead">
       <div class="container">
         <div class="row">
@@ -14,9 +13,7 @@
         <div class="row mt-5">
             <div class="col-lg-12" id="video" style="max-width: 660px; width: 660px; max-height: 371px; height: 371px; margin-left: auto; margin-right: auto;">
                 <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/bNwhYx0XnPY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->                
-
                 <!-- <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><iframe src="https://fast.wistia.net/embed/iframe/h4z90hkwgl?videoFoam=true" title="Wistia video player" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="100%" height="100%"></iframe></div></div> -->
-
                 <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><span class="wistia_embed wistia_async_h4z90hkwgl popover=true popoverAnimateThumbnail=true videoFoam=true" style="display:inline-block;height:100%;position:relative;width:100%">&nbsp;</span></div></div>
             </div>
         </div>
@@ -31,24 +28,24 @@
             <v-layout>
               <v-flex class="col-sm-6">
                 <ul class="productlist">
-                  <li><h4 v-html="translationText.pl1">Credit Restoration</h4></li>
-                  <li><h4 v-html="translationText.pl2">Credit Builder</h4></li>
-                  <li><h4 v-html="translationText.pl3">Credit Attorney</h4></li>
-                  <li><h4 v-html="translationText.pl4">Smart Credit</h4></li>
-                  <li><h4 v-html="translationText.pl5">Debt Zero</h4></li>
-                  <li><h4 v-html="translationText.pl6">Lifelock</h4></li>
-                  <li><h4 v-html="translationText.pl7">Financial Lockbox</h4></li>
+                  <li><h4 v-html="translationText.pl1"></h4></li>
+                  <li><h4 v-html="translationText.pl2"></h4></li>
+                  <li><h4 v-html="translationText.pl3"></h4></li>
+                  <li><h4 v-html="translationText.pl4"></h4></li>
+                  <li><h4 v-html="translationText.pl5"></h4></li>
+                  <li><h4 v-html="translationText.pl6"></h4></li>
+                  <li><h4 v-html="translationText.pl7"></h4></li>
                 </ul>
               </v-flex>
               <v-flex class="col-sm-6">
                 <ul class="productlist">
-                  <li><h4 v-html="translationText.pl8">Life Insurance</h4></li>
-                  <li><h4 v-html="translationText.pl9">MyCare Plan</h4></li>
-                  <li><h4 v-html="translationText.pl10">Discount Shopping</h4></li>
-                  <li><h4 v-html="translationText.pl11">YFL Family Mint</h4></li>
-                  <li><h4 v-html="translationText.pl12">RX Discount Card</h4></li>
-                  <li><h4 v-html="translationText.pl13">FES Travel</h4></li>
-                  <li><h4 v-html="translationText.pl14">Health Insurance</h4></li>
+                  <li><h4 v-html="translationText.pl8"></h4></li>
+                  <li><h4 v-html="translationText.pl9"></h4></li>
+                  <li><h4 v-html="translationText.pl10"></h4></li>
+                  <li><h4 v-html="translationText.pl11"></h4></li>
+                  <li><h4 v-html="translationText.pl12"></h4></li>
+                  <li><h4 v-html="translationText.pl13"></h4></li>
+                  <li><h4 v-html="translationText.pl14"></h4></li>
                 </ul>
               </v-flex>
             </v-layout>
@@ -246,10 +243,10 @@
         id: 'h4z90hkwgl',
         onReady: function (video) {
           // on play, seek the video to 10 seconds, then unbind so it
-          // only happens once.
+          // only happens once. video.bind('end', function (t) {
           video.bind('end', function (t) {
             console.log('the video ended')
-            d.$router.replace({ name: 'Funnel' })
+            d.funnel()
             video.popover.hide()
           })
         }
@@ -270,6 +267,17 @@
     computed: {
     },
     methods: {
+      funnel () {
+        var d = this
+        this.$store.dispatch('confirmer/ask', {
+          title: d.translationText.mTitlte,
+          body: d.translationText.mBody
+        }).then(confirmation => {
+          if (confirmation) {
+            d.$router.replace({ name: 'Funnel' })
+          }
+        })
+      },
       sendContact () {
         var dis = this
         axios.post(`https://www.educatucredito.com/mailer.php`, {
@@ -394,7 +402,9 @@
             pl12: 'RX Discount Card',
             pl13: 'FES Travel',
             pl14: 'Health Insurance',
-            feats: 'Primary Features'
+            feats: 'Primary Features',
+            mTitlte:'Thank you!',
+            mBody:'thank you for reviewing our opportunity video, pleaseclick below for more info, or to subscribe'
           }
         } else if (val === 'es') {
           this.translationText = {
@@ -451,7 +461,9 @@
             pl12: 'Tarjeta de descuento RX',
             pl13: 'FES Travel',
             pl14: 'Seguro de salud',
-            feats: 'Características principales'
+            feats: 'Características principales',
+            mTitlte:'¡Gracias!',
+            mBody:'gracias por revisar nuestro video de oportunidad, haga clic a continuación para obtener más información o para suscribirsegit'
           }
         }
       }

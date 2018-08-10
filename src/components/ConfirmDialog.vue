@@ -1,12 +1,12 @@
 <template>
-  <v-dialog :value="confirmer.active" max-width="290">
+  <v-dialog :value="confirmer.active" max-width="350px">
     <v-card>
       <v-card-title class="headline">{{ confirmer.title }}</v-card-title>
       <v-card-text>{{ confirmer.body }}</v-card-text>
       <v-card-actions>
         <v-spacer></v-spacer>
         <v-btn color="green darken-1" flat="flat" @click.native="cancel">Cancel</v-btn>
-        <v-btn color="green darken-1" flat="flat" @click.native="confirm">Confirm</v-btn>
+        <v-btn color="green darken-1" flat="flat" @click.native="confirm">Subscribe</v-btn>
       </v-card-actions>
     </v-card>
   </v-dialog>
