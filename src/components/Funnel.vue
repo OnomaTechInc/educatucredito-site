@@ -124,6 +124,12 @@ a {
 nav#mainNav {
   display: none !important;
 }
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
     body{
         font-size: 16px;
     }
@@ -142,7 +148,7 @@ nav#mainNav {
        top: 0;
        left: 0;
        opacity: 0.1;
-       height: 810px;
+       height: 750px;
    }
    .img-responsive{
        margin: 0 auto;
@@ -150,10 +156,10 @@ nav#mainNav {
    .heading{
        font-size: 1.5em;
        color: #2f2f2f;
-       margin: 75px 0 45px;
+       margin: 7% 0 5%;
    }
    .vidHolder{
-    margin: 60px auto 80px;
+    margin: 5% auto;
     max-width: 705px;
     }
     /* .vidHolder iframe{
@@ -163,7 +169,7 @@ nav#mainNav {
         background-color: red;
     } */
    .qouteBox{
-       margin-bottom: 50px;
+       margin-bottom: 5%;
    }
    .formArea{
        text-align: center;
@@ -199,7 +205,6 @@ nav#mainNav {
    .formArea form input{
         width: 100%;
         max-width: 432px;
-        min-width: 250px;
         margin: 0 auto;
         height: 36px;
         padding: 0 20px;
@@ -231,18 +236,34 @@ nav#mainNav {
         transition: all .35s ease-in-out;
    }
    footer{
-       margin-top: 50px;
+       margin-top: 5%;
        background-color: #e3612e;
+       padding: 2% 0;
    }
    footer h3{
        margin: 0;
        font-size:2em;
        color: white;
-       line-height: 80px;
    }
+
    #mc_embed_signup input {
      background: #fff
    }
+
+   /* mead queries */
+   @media only screen and (max-width:767px){
+       body{
+           font-size: 12px;
+       }
+       .formArea .head{
+           padding: 5px 0;
+       }
+       .formArea .note{
+           padding: 5px 0;
+       }
+   }
+   /* mead queries */
+
 </style>
 
 <script>
