@@ -12,52 +12,13 @@
           </div>
         </div>
         <div class="row mt-5">
-            <div class="col-lg-8" id="video" style="max-width: 660px; width: 660px; max-height: 371px; height: 371px; margin-left: auto; margin-right: auto;">
+            <div class="col-lg-12" id="video" style="max-width: 660px; width: 660px; max-height: 371px; height: 371px; margin-left: auto; margin-right: auto;">
                 <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/bNwhYx0XnPY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->                
 
                 <!-- <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><iframe src="https://fast.wistia.net/embed/iframe/h4z90hkwgl?videoFoam=true" title="Wistia video player" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="100%" height="100%"></iframe></div></div> -->
 
                 <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><span class="wistia_embed wistia_async_h4z90hkwgl popover=true popoverAnimateThumbnail=true videoFoam=true" style="display:inline-block;height:100%;position:relative;width:100%">&nbsp;</span></div></div>
             </div>
-          <div class="col-lg-4">
-            <div  id="registerform">
-              <!-- Begin MailChimp Signup Form -->
-<div id="mc_embed_signup">
-<form action="https://onomatech.us18.list-manage.com/subscribe/post?u=fa9463f3ae774118c273d8fa3&amp;id=1e3be0baa9" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-    <div id="mc_embed_signup_scroll">
-	<h2>Free Download How To Achieve Good Credit Standing</h2>
-<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-<div class="mc-field-group">
-	<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
-</label>
-	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-</div>
-<div class="mc-field-group">
-	<label for="mce-FNAME">First Name </label>
-	<input type="text" value="" name="FNAME" class="" id="mce-FNAME">
-</div>
-<div class="mc-field-group">
-	<label for="mce-LNAME">Last Name </label>
-	<input type="text" value="" name="LNAME" class="" id="mce-LNAME">
-</div>
-	<div id="mce-responses" class="clear">
-		<div class="response" id="mce-error-response" style="display:none"></div>
-		<div class="response" id="mce-success-response" style="display:none"></div>
-	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_fa9463f3ae774118c273d8fa3_1e3be0baa9" tabindex="-1" value=""></div>
-    <div class="clear"><input type="submit" @click="submitUserInfo" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="signup button"></div>
-    </div>
-</form>
-</div> 
-              <!-- <h4 v-html="translationText.section1h4"></h4>
-              <div class="Shape-1"></div>
-              <input type="text" v-model="rfullname" name="fullname" placeholder="Your Full Name" />
-              <input type="text" v-model="remail" name="email" placeholder="Your Email ID" />
-              <input type="password" v-model="rpassword" name="password" placeholder="Password" />
-              <input type="password" v-model="rconfirm" name="confirm_password" placeholder="Confirm Password" />
-              <input type="submit" @click="rsignup" value="Sign Up" class="signup" /> -->
-            </div>
-          </div>
         </div>
       </div>
     </header>
@@ -222,43 +183,6 @@
         </div>
       </div>
     </section>
-    <v-dialog v-model="dialog" max-width="500">
-      <v-card>
-        <v-card-text>
-          <div id="mc_embed_signup2">
-            <form action="https://onomatech.us18.list-manage.com/subscribe/post?u=fa9463f3ae774118c273d8fa3&amp;id=1e3be0baa9" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-              <div id="mc_embed_signup_scroll2">
-              <h2>Free Download How To Achieve Good Credit Standing</h2>
-            <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-            <div class="mc-field-group">
-              <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
-            </label>
-              <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-            </div>
-            <div class="mc-field-group">
-              <label for="mce-FNAME">First Name </label>
-              <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
-            </div>
-            <div class="mc-field-group">
-              <label for="mce-LNAME">Last Name </label>
-              <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
-            </div>
-              <div id="mce-responses2" class="clear">
-                <div class="response" id="mce-error-response" style="display:none"></div>
-                <div class="response" id="mce-success-response" style="display:none"></div>
-              </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_fa9463f3ae774118c273d8fa3_1e3be0baa9" tabindex="-1" value=""></div>
-                <div class="clear"><input @click="submitUserInfo" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="signup button"></div>
-                </div>
-            </form>
-          </div> 
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer></v-spacer>
-          
-        </v-card-actions>
-      </v-card>
-    </v-dialog>
   </v-container>
 </template>
 <!-- Plugin JavaScript -->
@@ -325,7 +249,7 @@
           // only happens once.
           video.bind('end', function (t) {
             console.log('the video ended')
-            d.dialog = true
+            d.$router.replace({ name: 'Funnel' })
             video.popover.hide()
           })
         }
@@ -348,7 +272,7 @@
     methods: {
       sendContact () {
         var dis = this
-        axios.post(`https://www.educatucredito.com/mailer.php'`, {
+        axios.post(`https://www.educatucredito.com/mailer.php`, {
           name: dis.cname,
           email: dis.cemail,
           subject: dis.csubject,

@@ -1,89 +1,24 @@
 <template>
   <v-app light>
-    <div v-if="!$route.meta.plainLayout">
-      <v-navigation-drawer
-        fixed
-        :mini-variant="miniVariant"
-        :clipped="clipped"
-        v-model="drawer"
-        app
-      >
-        <v-toolbar light flat class="transparent">
-          <v-list class="pa-0">
-            <v-list-tile avatar to="/profile">
-              <v-list-tile-avatar size="50" color="red">
-                <img v-if="userImage" :src="userImage" >
-                <span class="white--text headline" v-else> {{ initial }} </span>
-              </v-list-tile-avatar>
-              <v-list-tile-content>
-                <v-list-tile-title>{{ name }}</v-list-tile-title>
-              </v-list-tile-content>
-            </v-list-tile>
-          </v-list>
-        </v-toolbar>
-        <v-divider></v-divider>
-        <v-list>
-          <v-list-tile
-            value="true"
-            v-for="(item, i) in items"
-            :key="i"
-            exact
-            :to="item.link"
-          >
-            <v-list-tile-action>
-              <v-icon light v-html="item.icon"></v-icon>
-            </v-list-tile-action>
-            <v-list-tile-content>
-              <v-list-tile-title v-text="item.title"></v-list-tile-title>
-            </v-list-tile-content>
-          </v-list-tile>
-        </v-list>
-      </v-navigation-drawer>
-      <v-toolbar app :clipped-left="clipped">
-        <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-        <v-toolbar-title v-text="title"></v-toolbar-title>
-        <v-spacer></v-spacer>
-        <v-btn flat @click="logout">
-            <v-icon light small>exit_to_app</v-icon>
-            Log out
-          </v-btn>
-      </v-toolbar>
-      <v-content>
-        <div class="alert_container">
-          <v-alert 
-            class="notification" 
-            v-if="alertNotifications"
-            value="showAlertNotification" 
-            v-for="alertNotification in alertNotifications" 
-            :key="alertNotification.id" 
-            transition="fade-transition" 
-            :type="alertNotification.type"
-          >
-            {{ alertNotification.body }}
-            <a class="alert__dismissible" @click="closeAlert(alertNotification.id)"><i aria-hidden="true" class="icon icon--right material-icons">cancel</i></a>
-          </v-alert>
-        </div>
-        <ConfirmDialog/>
-        <router-view @setRoleName="processNameRole" @receiveAlertMessage="alertMessage = $event"></router-view>
-      </v-content>
-      <v-navigation-drawer
-        right
-        temporary
-        v-model="rightDrawer"
-        clipped
-        fixed
-      >
-        <v-list>
-          <v-list-tile @click="right = !right">
-          </v-list-tile>
-        </v-list>
-      </v-navigation-drawer>
-      <v-footer light :fixed="fixed" app>
-          <span class="pl-2">&copy; 2018</span>
-      </v-footer>
-    </div>
-
     <v-content v-if="$route.meta.plainLayout">
+      <div class="alert_container">
+        <v-alert 
+          class="notification" 
+          v-if="alertNotifications"
+          value="showAlertNotification" 
+          v-for="alertNotification in alertNotifications" 
+          :key="alertNotification.id" 
+          transition="fade-transition" 
+          :type="alertNotification.type"
+        >
+          {{ alertNotification.body }}
+          <a class="alert__dismissible" @click="closeAlert(alertNotification.id)"><i aria-hidden="true" class="icon icon--right material-icons">cancel</i></a>
+        </v-alert>
+      </div>
+      <router-view @setRoleName="processNameRole" @receiveAlertMessage="alertMessage = $event"/>
+      <ConfirmDialog/>
+    </v-content>
+    <v-content v-else>
       <!-- Navigation -->
       <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <div class="container">
@@ -102,19 +37,19 @@
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="/#/home">{{ link.home }}</a>
+                <a class="nav-link js-scroll-trigger" href="/home">{{ link.home }}</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="/#/about-us">{{ link.aboutus }}</a>
+                <a class="nav-link js-scroll-trigger" href="/about-us">{{ link.aboutus }}</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="https://blog.educatucredito.com">Blogs</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="/#/why-choose-us">{{ link.whyus }}</a>
+                <a class="nav-link js-scroll-trigger" href="/why-choose-us">{{ link.whyus }}</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link js-scroll-trigger" href="/#/login">{{ link.login }}</a>
+                  <a class="nav-link js-scroll-trigger" href="/user/#/login">{{ link.login }}</a>
               </li>
             </ul>
           </div>
@@ -165,19 +100,19 @@
           </div>
             <ul class="footernav">
               <li class="">
-                <a class="" href="/#/home">{{ link.home }}</a>
+                <a class="" href="/home">{{ link.home }}</a>
               </li>
               <li class="">
-                <a class="" href="/#/about-us">{{ link.aboutus }}</a>
+                <a class="" href="/about-us">{{ link.aboutus }}</a>
               </li>
               <li class="">
                 <a class="nav-link js-scroll-trigger" href="https://blog.educatucredito.com">Blogs</a>
               </li>
               <li class="">
-                <a class="" href="/#/why-choose-us">{{ link.whyus }}</a>
+                <a class="" href="/why-choose-us">{{ link.whyus }}</a>
               </li>
               <li class="">
-                  <a class="" href="/#/login">{{ link.login }}</a>
+                  <a class="" href="/user/login">{{ link.login }}</a>
                 </li>
             </ul>
         </div>

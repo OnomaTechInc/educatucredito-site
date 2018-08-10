@@ -85,7 +85,7 @@
         if (val === 'en') {
           this.translationText = {
             heading: 'WHY CHOOSE US',
-            lead:'Financial Education is not just for the wealthy.',
+            lead: 'Financial Education is not just for the wealthy.',
             whyusp1: 'This is for everyone. We all have the right to know that financial freedom is not impossible and it is reachable by correct guidance and help of financial experts that cares about you.',
             whyusp2: 'With many years of combined experience, we have extensive training on analysis on how credit bureaus work. We understand and we want to share our clients what legal rights they have to protect themselves during financial crisis.',
             whyusp3: 'We collaborated with each other and analyze every situation we have on each of our clients and provide strategic ways to increase their credit score, eliminate erroneous credit report and suggest tips on specific ways to help them handle their debts well for the goal of achieving  good financial lifestyle.',
@@ -106,7 +106,7 @@
         } else if (val === 'es') {
           this.translationText = {
             heading: 'POR QUÉ ELEGIRNOS',
-            lead:'La educación financiera no es solo para los ricos.',
+            lead: 'La educación financiera no es solo para los ricos.',
             whyusp1: 'La educación financiera no es solo para los ricos. Esto es para todos. Todos tenemos derecho a saber que la libertad financiera no es imposible y que es alcanzable mediante la orientación correcta y la ayuda de expertos financieros que se preocupan por usted.',
             whyusp2: 'Con muchos años de experiencia combinada, tenemos una amplia capacitación en análisis sobre cómo funcionan las oficinas de crédito. Entendemos y queremos compartir con nuestros clientes los derechos legales que tienen para protegerse durante la crisis financiera.',
             whyusp3: 'Colaboramos entre nosotros y analizamos cada situación que tenemos en cada uno de nuestros clientes y proporcionamos formas estratégicas para aumentar su puntaje de crédito, eliminar informes de crédito erróneos y sugerir sugerencias sobre formas específicas para ayudarlos a manejar bien sus deudas con el objetivo de lograr buenos resultados financieros. estilo de vida.',
