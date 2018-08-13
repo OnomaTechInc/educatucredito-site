@@ -19,41 +19,6 @@
         </div>
       </div>
     </header>
-
-    <section class="features">
-      <div class="container">
-        <v-layout row wrap>
-          <v-flex class="featurelist">
-            <h2 style="width: 100%; margin-bottom: 20px; margin-top: 50px;" v-html="translationText.feats"></h2>
-            <v-layout>
-              <v-flex class="col-sm-6">
-                <ul class="productlist">
-                  <li><h4 v-html="translationText.pl1"></h4></li>
-                  <li><h4 v-html="translationText.pl2"></h4></li>
-                  <li><h4 v-html="translationText.pl3"></h4></li>
-                  <li><h4 v-html="translationText.pl4"></h4></li>
-                  <li><h4 v-html="translationText.pl5"></h4></li>
-                  <li><h4 v-html="translationText.pl6"></h4></li>
-                  <li><h4 v-html="translationText.pl7"></h4></li>
-                </ul>
-              </v-flex>
-              <v-flex class="col-sm-6">
-                <ul class="productlist">
-                  <li><h4 v-html="translationText.pl8"></h4></li>
-                  <li><h4 v-html="translationText.pl9"></h4></li>
-                  <li><h4 v-html="translationText.pl10"></h4></li>
-                  <li><h4 v-html="translationText.pl11"></h4></li>
-                  <li><h4 v-html="translationText.pl12"></h4></li>
-                  <li><h4 v-html="translationText.pl13"></h4></li>
-                  <li><h4 v-html="translationText.pl14"></h4></li>
-                </ul>
-              </v-flex>
-            </v-layout>
-          </v-flex>
-        </v-layout>
-      </div>
-    </section>
-
     <section class="section2">
       <div class="container">
         <div class="row text-center mt-5">
@@ -160,6 +125,62 @@
       </div>
     </section>
 
+    <section class="pricing">
+      <div class="container">
+        <v-layout row justify-center>
+          <v-dialog class="modalForm" v-model="dialog" height="90%" max-width="80%">
+            <v-card>
+              <v-card-title class="headline">Register</v-card-title>
+              <v-card-text style="height: 2100px;">
+                <iframe src="https://www.financialeducationservices.com/proplan99.aspx?rid=kfernandez" frameborder="0" width="100%" height="100%"></iframe>
+              </v-card-text>
+              <v-card-actions>
+                <v-btn
+                  color="blue darken-1"
+                  flat="flat"
+                  @click="dialog = false"
+                >
+                  Close
+                </v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-dialog>
+        </v-layout>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-6">
+            <div class="priceBox">
+              <span class="type">Professional</span>
+              <ul>
+
+                <li><span v-html="translationText.section3title1"></span></li>
+                <li><span v-html="translationText.section3title2"></span></li>
+                <li><span v-html="translationText.section3title3"></span></li>
+                <li><span v-html="translationText.section3title4"></span></li>
+                <li><span v-html="translationText.section3title5"></span></li>
+                <li><span v-html="translationText.section3title6"></span></li>
+                <li><span v-html="translationText.section3title7"></span></li>
+              </ul>
+              <span class="price">$188</span>
+              <a href="#" class="btnSubscribe">subscribe</a>
+            </div>    
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-6">
+            <div class="cta">
+              <div class="text-center">
+                <h1 v-html="translationText.pricingHead"></h1>
+                <p v-html="translationText.pricingBody"></p>
+                <p v-html="translationText.pricingPrice">
+                  Credit Repair Professional Package Fee <br>
+                  First Payment: $188 (Onetime Setup fee $99 & Monthly Fee $89) <b></b>
+                  Month To Month/No Contract
+                </p>
+                <v-btn color="primary" dark @click.stop="dialog = true" v-html="translationText.pricingBtn"></v-btn>
+              </div>
+            </div>  
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="section4">
       <div class="container pt-4">
         <div class="row text-center pt-5">
@@ -181,6 +202,7 @@
       </div>
     </section>
   </v-container>
+  
 </template>
 <!-- Plugin JavaScript -->
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>-->
@@ -404,7 +426,11 @@
             pl14: 'Health Insurance',
             feats: 'Primary Features',
             mTitlte:'Thank you!',
-            mBody:'thank you for reviewing our opportunity video, click the button below to subscribe'
+            mBody:'thank you for reviewing our opportunity video, click the button below to subscribe',
+            pricingHead:'Say Goodbye To Your Credit Worries.',
+            pricingPrice:'Credit Repair Professional Package Fee <br> First Payment: $188 (Onetime Setup fee $99 & Monthly Fee $89) <br> Month To Month/No Contract',
+            pricingBody:' Let Us Help You Fix And Rebuild Your Credit Scores.',
+            pricingBtn:'Register To Get Started Now'
           }
         } else if (val === 'es') {
           this.translationText = {
@@ -463,7 +489,11 @@
             pl14: 'Seguro de salud',
             feats: 'Características principales',
             mTitlte:'¡Gracias!',
-            mBody:'gracias por revisar nuestro video de oportunidad, haga clic a continuación para obtener más información o para suscribirsegit'
+            mBody:'gracias por revisar nuestro video de oportunidad, haga clic a continuación para obtener más información o para suscribirsegit',
+            pricingHead:'Dile Adiós A Tus Preocupaciones Crediticias. ',
+            pricingPrice:'Tarifa De Paquete Profesional De Reparación De Crédito <br> Primer Pago: $188 (Tarifa De Configuración De Onetime $99 Y Tarifa Mensual De $89) <br> Mes A Mes / Sin Contrato.',
+            pricingBody:'Permítanos Ayudarlo A Arreglar Y Reconstruir Sus Puntajes De Crédito.',
+            pricingBtn:'Regístrese Para Comenzar Ahora'
           }
         }
       }

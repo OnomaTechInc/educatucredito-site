@@ -258,6 +258,7 @@ section.features .featurelist .col-sm-6 ul li h4:before{
   background-color: #2779ad;
   background-image: url(../img/section-3-bg.png);
   padding-top: 47px;
+  padding: 50px;
 }
 header.masthead, header.masthead2, header.masthead3 {
   background-image: url(../img/section-1-bg.png);
@@ -626,6 +627,78 @@ background-color: #3ea8d9;
 }
 /* slider  */
 
+
+/* Pricing Box */
+.pricing{
+  background: url(../img/pricingbg.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 50px 0;
+}
+.pricing .priceBox {
+  border-radius: 10px;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  max-width:342px;
+  background: linear-gradient(to bottom, #2b6e8e, #397e9e,#458cad,#539bbd);
+}
+.pricing .priceBox .type{
+  display: block;
+  border-radius: 10px;
+  background-color: #226b8d;
+  font-size: 34.95px;
+  color: white;
+  font-weight: 800;
+  text-transform: uppercase;
+  box-shadow: 0 5px rgba(0,0,0,0.5);
+}
+.pricing .priceBox ul{
+  padding: 0;
+  margin: 35px 0 20px;
+  list-style: none;
+}
+.pricing .priceBox ul li span{
+  display: inline-block;
+  position: relative;
+  color: white;;
+  padding-left: 15px;
+}
+.pricing .priceBox ul li span:before{
+  position: absolute;
+  content: url(../img/check.png);
+  left: -15px;
+}
+.pricing .priceBox .price{
+  display: block;
+  font-size: 65px;
+  font-weight: 800;
+  line-height: 1;
+  color: white;
+}
+.pricing .priceBox .btnSubscribe{
+  margin-top: 15px;
+  font-size: 35px;
+  font-weight: 800;
+  color: white;
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+  background: url(../img/btnbg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+/* Pricing Box */
+
+/* regform */
+.pricing .v-dialog{
+  height: 905;
+}
+
+/* regform */
+
 /* Dashboard */
 #dashboard .text-underline{
   padding-bottom: 5px;
@@ -710,7 +783,6 @@ background-color: #3ea8d9;
   border-bottom: 2px solid #2b2c2c;
   display: inline-block;
 }
-
 /* Dashboard */
 
 
@@ -914,7 +986,7 @@ header.masthead, header.masthead2 {
 
 /* SECTION 3 */
   .section3 {
-    padding: 30px 0 0;
+    padding: 30px 0 50px;
     height: auto;
   }
   .section3 h1 {
@@ -1007,6 +1079,12 @@ header.masthead, header.masthead2 {
 }
 /* CONTACT */
 
+
+/* prcing */
+.pricing .row div{
+  margin-bottom: 35px;
+}
+/* prcing */
 }
 @media only screen and (max-width:576px){
   .section4 .container{
