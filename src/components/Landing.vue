@@ -302,7 +302,8 @@
       },
       sendContact () {
         var dis = this
-        axios.post(`https://www.educatucredito.com/mailer.php`, {
+        // axios.post(`https://www.educatucredito.com/mailer.php`, {
+        axios.post(`${window.apiLink}contacts`, {
           name: dis.cname,
           email: dis.cemail,
           subject: dis.csubject,
