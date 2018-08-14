@@ -302,7 +302,8 @@
       },
       sendContact () {
         var dis = this
-        axios.post(`https://www.educatucredito.com/mailer.php`, {
+        // axios.post(`https://www.educatucredito.com/mailer.php`, {
+        axios.post(`${window.apiLink}contacts`, {
           name: dis.cname,
           email: dis.cemail,
           subject: dis.csubject,
@@ -425,12 +426,21 @@
             pl13: 'FES Travel',
             pl14: 'Health Insurance',
             feats: 'Primary Features',
+<<<<<<< HEAD
             mTitlte:'Thank you!',
             mBody:'Thank you for reviewing our opportunity video, click the button below to subscribe',
             pricingHead:'Say Goodbye To Your Credit Worries.',
             pricingPrice:'Credit Repair Professional Package Fee <br> First Payment: $188 (Onetime Setup fee $99 & Monthly Fee $89) <br> Month To Month/No Contract',
             pricingBody:' Let Us Help You Fix And Rebuild Your Credit Scores.',
             pricingBtn:'Register To Get Started Now'
+=======
+            mTitlte: 'Thank you!',
+            mBody: 'thank you for reviewing our opportunity video, click the button below to subscribe',
+            pricingHead: 'Say Goodbye To Your Credit Worries.',
+            pricingPrice: 'Credit Repair Professional Package Fee <br> First Payment: $188 (Onetime Setup fee $99 & Monthly Fee $89) <br> Month To Month/No Contract',
+            pricingBody: ' Let Us Help You Fix And Rebuild Your Credit Scores.',
+            pricingBtn: 'Register To Get Started Now'
+>>>>>>> 4fb780291da677415b7b5b0008caf97b06bc3b00
           }
         } else if (val === 'es') {
           this.translationText = {
@@ -488,12 +498,12 @@
             pl13: 'FES Travel',
             pl14: 'Seguro de salud',
             feats: 'Características principales',
-            mTitlte:'¡Gracias!',
-            mBody:'gracias por revisar nuestro video de oportunidad, haga clic a continuación para obtener más información o para suscribirsegit',
-            pricingHead:'Dile Adiós A Tus Preocupaciones Crediticias. ',
-            pricingPrice:'Tarifa De Paquete Profesional De Reparación De Crédito <br> Primer Pago: $188 (Tarifa De Configuración De Onetime $99 Y Tarifa Mensual De $89) <br> Mes A Mes / Sin Contrato.',
-            pricingBody:'Permítanos Ayudarlo A Arreglar Y Reconstruir Sus Puntajes De Crédito.',
-            pricingBtn:'Regístrese Para Comenzar Ahora'
+            mTitlte: '¡Gracias!',
+            mBody: 'gracias por revisar nuestro video de oportunidad, haga clic a continuación para obtener más información o para suscribirsegit',
+            pricingHead: 'Dile Adiós A Tus Preocupaciones Crediticias. ',
+            pricingPrice: 'Tarifa De Paquete Profesional De Reparación De Crédito <br> Primer Pago: $188 (Tarifa De Configuración De Onetime $99 Y Tarifa Mensual De $89) <br> Mes A Mes / Sin Contrato.',
+            pricingBody: 'Permítanos Ayudarlo A Arreglar Y Reconstruir Sus Puntajes De Crédito.',
+            pricingBtn: 'Regístrese Para Comenzar Ahora'
           }
         }
       }

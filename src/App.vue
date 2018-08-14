@@ -88,9 +88,9 @@
         <div class="container">
             <div class="footer-logo"><img class="logo" src="@/assets/footer-logo.png" /></div>
             <div class="invert-center">
-              <a href="https://www.youtube.com/channel/UCqSgxarIeeU-Zd_mNILoW5g"><img src="@/assets/footer-youtube.png" /></a> 
-              <a href="https://www.facebook.com/Educa-Tu-Credito-643508152673251/"><img src="@/assets/footer-facebook.png" /></a> 
-              <a href="https://www.instagram.com/educatucredito/"><img src="@/assets/footer-instagram.png" /></a> 
+              <a target="_blank" href="https://www.youtube.com/channel/UCqSgxarIeeU-Zd_mNILoW5g"><img src="@/assets/footer-youtube.png" /></a> 
+              <a target="_blank" href="https://www.facebook.com/Educa-Tu-Credito-643508152673251/"><img src="@/assets/footer-facebook.png" /></a> 
+              <a target="_blank" href="https://www.instagram.com/educatucredito/"><img src="@/assets/footer-instagram.png" /></a> 
             </div>
 
             <div class="copyright-reserved">&copy; Educa Tu Credito 2018. All Rights Reserved.</div>
