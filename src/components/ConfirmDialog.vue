@@ -5,8 +5,8 @@
       <v-card-text>{{ confirmer.body }}</v-card-text>
       <v-card-actions>
         <v-spacer></v-spacer>
-        <v-btn color="green darken-1" flat="flat" @click.native="cancel">Cancel</v-btn>
-        <v-btn color="green darken-1" flat="flat" @click.native="confirm">Subscribe</v-btn>
+        <v-btn color="green darken-1" flat="flat" @click.native="cancel">{{ confirmer.cancel }}</v-btn>
+        <v-btn color="green darken-1" flat="flat" @click.native="confirm">{{ confirmer.confirm }}</v-btn>
       </v-card-actions>
     </v-card>
   </v-dialog>

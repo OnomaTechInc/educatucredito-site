@@ -202,7 +202,6 @@
       </div>
     </section>
   </v-container>
-  
 </template>
 <!-- Plugin JavaScript -->
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>-->
@@ -294,6 +293,8 @@
         this.$store.dispatch('confirmer/ask', {
           title: d.translationText.mTitlte,
           body: d.translationText.mBody,
+          cancel: 'Cancel',
+          confirm: 'Proceed'
         }).then(confirmation => {
           if (confirmation) {
             d.$router.replace({ name: 'Funnel' })
@@ -427,7 +428,7 @@
             pl14: 'Health Insurance',
             feats: 'Primary Features',
             mTitlte: 'Thank you!',
-            mBody: 'thank you for reviewing our opportunity video, click the button below to subscribe',
+            mBody: 'Thank You! would you like to watch more video',
             pricingHead: 'Say Goodbye To Your Credit Worries.',
             pricingPrice: 'Credit Repair Professional Package Fee <br> First Payment: $188 (Onetime Setup fee $99 & Monthly Fee $89) <br> Month To Month/No Contract',
             pricingBody: ' Let Us Help You Fix And Rebuild Your Credit Scores.',
@@ -490,7 +491,7 @@
             pl14: 'Seguro de salud',
             feats: 'Características principales',
             mTitlte: '¡Gracias!',
-            mBody: 'gracias por revisar nuestro video de oportunidad, haga clic a continuación para obtener más información o para suscribirsegit',
+            mBody: '¡Gracias! te gustaría ver más videos',
             pricingHead: 'Dile Adiós A Tus Preocupaciones Crediticias. ',
             pricingPrice: 'Tarifa De Paquete Profesional De Reparación De Crédito <br> Primer Pago: $188 (Tarifa De Configuración De Onetime $99 Y Tarifa Mensual De $89) <br> Mes A Mes / Sin Contrato.',
             pricingBody: 'Permítanos Ayudarlo A Arreglar Y Reconstruir Sus Puntajes De Crédito.',

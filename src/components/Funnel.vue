@@ -348,7 +348,9 @@
         var d = this
         this.$store.dispatch('confirmer/ask', {
           title: 'Subscribe',
-          body: 'Subscribe first to proceed to next video',
+          body: 'You need to subscribe first to proceed to the next video',
+          cancel: 'Cancel',
+          confirm: 'Subscribe'
         }).then(confirmation => {
           if (confirmation) {
             d.$vuetify.goTo('#formArea')
@@ -361,19 +363,24 @@
       },
       subscribe() {
         var data = this
-        axios.post('https://www.educatucredito.com/mailchimp/subscribe.php',
-        {
-          email: data.EMAIL,
-          fname: data.FNAME,
-          lname: data.LNAME
-        }).then(function(response){
-          data.secondVideo()
-          data.EMAIL= ''
-          data.FNAME= ''
-          data.LNAME= ''
-        }).catch(function (error) {
-          alert(error)
-        })
+        if(data.EMAIL.length > 0){
+          axios.post('https://www.educatucredito.com/mailchimp/subscribe.php',
+          {
+            email: data.EMAIL,
+            fname: data.FNAME,
+            lname: data.LNAME
+          }).then(function(response){
+            console.log(response)
+            data.secondVideo()
+            data.EMAIL= ''
+            data.FNAME= ''
+            data.LNAME= ''
+          }).catch(function (error) {
+            alert(error)
+          })
+        }else{
+          alert("Email is Required!")
+        }
       }
     }
   }

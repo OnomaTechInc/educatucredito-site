@@ -2,6 +2,8 @@ const initialState = {
   active: false,
   title: '',
   body: '',
+  cancel: '',
+  confirm: '',
   resolve: null,
   reject: null
 }
@@ -18,12 +20,14 @@ const mutations = {
 }
 
 const actions = {
-  ask: ({ commit }, { title, body }) => {
+  ask: ({ commit }, { title, body, cancel, confirm }) => {
     return new Promise((resolve, reject) => {
       commit('ACTIVATE', {
         active: true,
         title,
         body,
+        cancel,
+        confirm,
         resolve,
         reject
       })
