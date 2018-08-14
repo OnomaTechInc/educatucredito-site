@@ -426,21 +426,12 @@
             pl13: 'FES Travel',
             pl14: 'Health Insurance',
             feats: 'Primary Features',
-<<<<<<< HEAD
-            mTitlte:'Thank you!',
-            mBody:'Thank you for reviewing our opportunity video, click the button below to subscribe',
-            pricingHead:'Say Goodbye To Your Credit Worries.',
-            pricingPrice:'Credit Repair Professional Package Fee <br> First Payment: $188 (Onetime Setup fee $99 & Monthly Fee $89) <br> Month To Month/No Contract',
-            pricingBody:' Let Us Help You Fix And Rebuild Your Credit Scores.',
-            pricingBtn:'Register To Get Started Now'
-=======
             mTitlte: 'Thank you!',
             mBody: 'thank you for reviewing our opportunity video, click the button below to subscribe',
             pricingHead: 'Say Goodbye To Your Credit Worries.',
             pricingPrice: 'Credit Repair Professional Package Fee <br> First Payment: $188 (Onetime Setup fee $99 & Monthly Fee $89) <br> Month To Month/No Contract',
             pricingBody: ' Let Us Help You Fix And Rebuild Your Credit Scores.',
             pricingBtn: 'Register To Get Started Now'
->>>>>>> 4fb780291da677415b7b5b0008caf97b06bc3b00
           }
         } else if (val === 'es') {
           this.translationText = {
