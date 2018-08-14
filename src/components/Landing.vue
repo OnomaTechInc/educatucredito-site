@@ -293,7 +293,7 @@
         var d = this
         this.$store.dispatch('confirmer/ask', {
           title: d.translationText.mTitlte,
-          body: d.translationText.mBody
+          body: d.translationText.mBody,
         }).then(confirmation => {
           if (confirmation) {
             d.$router.replace({ name: 'Funnel' })
@@ -426,7 +426,7 @@
             pl14: 'Health Insurance',
             feats: 'Primary Features',
             mTitlte:'Thank you!',
-            mBody:'thank you for reviewing our opportunity video, click the button below to subscribe',
+            mBody:'Thank you for reviewing our opportunity video, click the button below to subscribe',
             pricingHead:'Say Goodbye To Your Credit Worries.',
             pricingPrice:'Credit Repair Professional Package Fee <br> First Payment: $188 (Onetime Setup fee $99 & Monthly Fee $89) <br> Month To Month/No Contract',
             pricingBody:' Let Us Help You Fix And Rebuild Your Credit Scores.',

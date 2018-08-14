@@ -14,7 +14,7 @@
             <iframe width="560" height="315" src="https://www.youtube.com/embed/a6mx_Vy4Dz4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
           <div class="col-lg-12 my-auto" style="text-align: center">
-            <v-btn class="primary" v-html="translationText.btn1" to="/user/#/register"></v-btn>
+            <v-btn class="primary" v-html="translationText.btn1" @click="register"></v-btn>
           </div>
         </div>
 
@@ -61,6 +61,9 @@
       }
     },
     methods: {
+      register () {
+        window.location.href = 'https://www.educatucredito.com/user/#/register'
+      },
       translation (val) {
         if (val === 'en') {
           this.translationText = {

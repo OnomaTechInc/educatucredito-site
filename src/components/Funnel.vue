@@ -14,7 +14,7 @@
               <div class="qouteBox">
                 <img src="/static/img/qoute2.png" alt="" class="img-responsive">
               </div>
-              <div class="formArea">
+              <div id="formArea"  class="formArea">
                 <span class="head">Learn Each Secrets
                     On Credit Building
                   </span>
@@ -25,23 +25,23 @@
 
               <!-- Begin MailChimp Signup Form -->
                 <div id="mc_embed_signup">
-                <form action="https://onomatech.us18.list-manage.com/subscribe/post?u=fa9463f3ae774118c273d8fa3&amp;id=1e3be0baa9" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <form novganun nalidate>
                     <div id="mc_embed_signup_scroll">
                 <div class="mc-field-group">
-                  <input type="text" value="" name="FNAME" class="" placeholder="Your First Name..." id="mce-FNAME">
+                  <input type="text" value="" v-model="FNAME"  class="" placeholder="Your First Name..." id="mce-FNAME">
                 </div>
                 <div class="mc-field-group">
-                  <input type="text" value="" name="LNAME" class="" placeholder="Your Last Name..." id="mce-LNAME">
+                  <input type="text" value="" v-model="LNAME"  class="" placeholder="Your Last Name..." id="mce-LNAME">
                 </div>
                 <div class="mc-field-group">
-                  <input type="email" value="" name="EMAIL" class="required email" placeholder="Email Address..." id="mce-EMAIL">
+                  <input type="email" value="" v-model="EMAIL" class="required email" placeholder="Email Address..." id="mce-EMAIL">
                 </div>
                   <div id="mce-responses" class="clear">
                     <div class="response" id="mce-error-response" style="display:none"></div>
                     <div class="response" id="mce-success-response" style="display:none"></div>
                   </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                     <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_fa9463f3ae774118c273d8fa3_1e3be0baa9" tabindex="-1" value=""></div>
-                    <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btnOrange">KNOW THE SECRET</button>
+                    <button type="submit" v-on:click.prevent="subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btnOrange">KNOW THE SECRET</button>
                     <!-- <div class="clear"><input type="submit" @click="submitUserInfo" value="KNOW THE SECRET" name="subscribe" id="mc-embedded-subscribe" class="signup button btnOrange"></div> -->
                     </div>
                 </form>
@@ -63,67 +63,100 @@
         </footer>
       </v-layout>
     </v-slide-y-transition>
+    <v-dialog persistent v-model="dialog" width="500" >
+      <v-card>
+        <v-card-title
+          primary-title
+        >
+        Next Video / Register
+        </v-card-title>
+
+        <v-card-text>
+          Would you like to Register now or Proceed to next video?
+        </v-card-text>
+
+        <v-divider></v-divider>
+
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn
+            color="primary"
+            flat
+            @click="moreinfo"
+          >
+            Next Video
+          </v-btn>
+          <v-btn
+            color="primary"
+            flat
+            @click="register"
+          >
+            Register
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
   </v-container>
 </template>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-@-moz-keyframes loader {
-  from {
-    transform: rotate(0);
+  <style scoped>
+  @-moz-keyframes loader {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
   }
-  to {
-    transform: rotate(360deg);
+  @-webkit-keyframes loader {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
   }
-}
-@-webkit-keyframes loader {
-  from {
-    transform: rotate(0);
+  @-o-keyframes loader {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
   }
-  to {
-    transform: rotate(360deg);
+  @keyframes loader {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
   }
-}
-@-o-keyframes loader {
-  from {
-    transform: rotate(0);
+  .content--wrap .container {
+    background: #f5f5f5;
   }
-  to {
-    transform: rotate(360deg);
+  .content-container {
+    padding: 20px;
+    background: #fff;
   }
-}
-@keyframes loader {
-  from {
-    transform: rotate(0);
+  h1, h2 {
+    font-weight: normal;
   }
-  to {
-    transform: rotate(360deg);
+  ul {
+    list-style-type: none;
+    padding: 0;
   }
-}
-.content--wrap .container {
-  background: #f5f5f5;
-}
-.content-container {
-  padding: 20px;
-  background: #fff;
-}
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-nav#mainNav {
-  display: none !important;
-}
+  li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  a {
+    color: #42b983;
+  }
+  nav#mainNav {
+    display: none !important;
+  }
 
 
 /* ==========================================================================
@@ -267,14 +300,18 @@ nav#mainNav {
 </style>
 
 <script>
-  // import axios from 'axios'
+  import axios from 'axios'
   // import {uuid} from 'vue-uuid'
   import jQuery from 'jquery'
   window.$ = window.jQuery = jQuery
   export default {
     data () {
       return {
+        dialog: false,
         session: '',
+        FNAME:'',
+        LNAME:'',
+        EMAIL:'',
         items: []
       }
     },
@@ -283,8 +320,61 @@ nav#mainNav {
     watch: {
     },
     created () {
+      var d = this
+      window._wq = window._wq || []
+      // target our video by the first 3 characters of the hashed ID
+      window._wq.push({
+        id: 'xbiw6z7e9l',
+        onReady: function (video) {
+          // on play, seek the video to 10 seconds, then unbind so it
+          // only happens once. video.bind('end', function (t) {
+          video.bind('end', function (t) {
+            console.log('the video ended')
+            d.nextVideo()
+            // $('#mc_embed_signup').scrollTop();
+            video.popover.hide()
+          })
+        }
+      })
     },
     methods: {
+      register () {
+        window.location.href = 'https://www.educatucredito.com/user/#/register'
+      },
+      moreinfo () {
+        this.$router.replace({ name: 'MoreInfo' })
+      },
+      nextVideo () {
+        var d = this
+        this.$store.dispatch('confirmer/ask', {
+          title: 'Subscribe',
+          body: 'Subscribe first to proceed to next video',
+        }).then(confirmation => {
+          if (confirmation) {
+            d.$vuetify.goTo('#formArea')
+          }
+        })
+      },
+      secondVideo () {
+        var d = this
+        d.dialog = true
+      },
+      subscribe() {
+        var data = this
+        axios.post('https://www.educatucredito.com/mailchimp/subscribe.php',
+        {
+          email: data.EMAIL,
+          fname: data.FNAME,
+          lname: data.LNAME
+        }).then(function(response){
+          data.secondVideo()
+          data.EMAIL= ''
+          data.FNAME= ''
+          data.LNAME= ''
+        }).catch(function (error) {
+          alert(error)
+        })
+      }
     }
   }
 </script>
