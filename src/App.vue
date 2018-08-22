@@ -112,6 +112,12 @@
                 <a class="" href="/why-choose-us">{{ link.whyus }}</a>
               </li>
               <li class="">
+                <a class="" href="/terms-and-conditions">{{ link.terms }}</a>
+              </li>
+              <li class="">
+                <a class="" href="/privacy-policy">{{ link.privacy }}</a>
+              </li>
+              <li class="">
                   <a class="" href="https://account.educatucredito.com/login">{{ link.login }}</a>
                 </li>
             </ul>
@@ -264,7 +270,9 @@
             home: 'Home',
             aboutus: 'About Us',
             whyus: 'Why Choose Us',
-            login: 'Login / Sign Up'
+            login: 'Login / Sign Up',
+            terms:'Terms and Conditions',
+            privacy:'Privacy Policy'
           }
         } else {
           this.language = 'es'
@@ -272,7 +280,9 @@
             home: 'Inicio',
             aboutus: 'Sobre Nosotros',
             whyus: 'Por Qué Elegirnos',
-            login: 'Iniciar Sesión / Regístrate'
+            login: 'Iniciar Sesión / Regístrate',
+            terms:'Términos y Condiciones',
+            privacy:'Política de privacidad'
           }
         }
         // this.dialogLanguage = false

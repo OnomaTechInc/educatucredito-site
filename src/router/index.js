@@ -7,6 +7,8 @@ import WhyUs from '@/components/WhyUs'
 import Inside from '@/components/Inside'
 import MoreInfo from '@/components/MoreInfo'
 import Funnel from '@/components/Funnel'
+import Terms from '@/components/Terms'
+import Privacy from '@/components/Privacy'
 
 Vue.use(Router)
 
@@ -62,6 +64,16 @@ export default new Router({
     path: '/about-us',
     name: 'AboutUs',
     component: AboutUs
+  },
+  {
+    path: '/terms-and-conditions',
+    name: 'Terms',
+    component: Terms
+  },
+  {
+    path: '/privacy-policy',
+    name: 'Privacy',
+    component: Privacy
   },
   {
     path: '*',

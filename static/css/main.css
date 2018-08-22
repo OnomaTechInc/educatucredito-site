@@ -786,6 +786,29 @@ background-color: #3ea8d9;
 /* Dashboard */
 
 
+/* terms */
+#terms header h3{
+  color: #000;
+  font-size: 50px;
+}
+#terms .box{
+  text-align: left;
+  margin: 0 auto 50px;
+}
+#terms .box p{
+  max-width: 100%;
+  margin: 20px 0;
+}
+#terms .box .list ul{
+  list-style: none;
+  padding-left: 30px;
+}
+#terms .box .list ul li{
+  text-indent: 20px;
+  margin-bottom: 10px;
+}
+/* terms */
+
 @media only screen and (max-width:1263px){
   .contactdetails{
     display: none;
