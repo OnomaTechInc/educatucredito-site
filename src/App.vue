@@ -49,7 +49,7 @@
                 <a class="nav-link js-scroll-trigger" href="/why-choose-us">{{ link.whyus }}</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link js-scroll-trigger" href="/user/#/login">{{ link.login }}</a>
+                  <a class="nav-link js-scroll-trigger" href="https://account.educatucredito.com/login">{{ link.login }}</a>
               </li>
             </ul>
           </div>
@@ -112,7 +112,7 @@
                 <a class="" href="/why-choose-us">{{ link.whyus }}</a>
               </li>
               <li class="">
-                  <a class="" href="/user/login">{{ link.login }}</a>
+                  <a class="" href="https://account.educatucredito.com/login">{{ link.login }}</a>
                 </li>
             </ul>
         </div>

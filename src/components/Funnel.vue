@@ -309,9 +309,9 @@
       return {
         dialog: false,
         session: '',
-        FNAME:'',
-        LNAME:'',
-        EMAIL:'',
+        FNAME: '',
+        LNAME: '',
+        EMAIL: '',
         items: []
       }
     },
@@ -339,7 +339,7 @@
     },
     methods: {
       register () {
-        window.location.href = 'https://www.educatucredito.com/user/#/register'
+        window.location.href = 'https://account.educatucredito.com/register'
       },
       moreinfo () {
         this.$router.replace({ name: 'MoreInfo' })
@@ -361,25 +361,24 @@
         var d = this
         d.dialog = true
       },
-      subscribe() {
+      subscribe () {
         var data = this
-        if(data.EMAIL.length > 0){
-          axios.post('https://www.educatucredito.com/mailchimp/subscribe.php',
-          {
+        if (data.EMAIL.length > 0) {
+          axios.post('https://www.educatucredito.com/mailchimp/subscribe.php', {
             email: data.EMAIL,
             fname: data.FNAME,
             lname: data.LNAME
-          }).then(function(response){
+          }).then(function (response) {
             console.log(response)
             data.secondVideo()
-            data.EMAIL= ''
-            data.FNAME= ''
-            data.LNAME= ''
+            data.EMAIL = ''
+            data.FNAME = ''
+            data.LNAME = ''
           }).catch(function (error) {
             alert(error)
           })
-        }else{
-          alert("Email is Required!")
+        } else {
+          alert('Email is Required!')
         }
       }
     }

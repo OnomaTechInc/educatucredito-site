@@ -62,7 +62,7 @@
     },
     methods: {
       register () {
-        window.location.href = 'https://www.educatucredito.com/user/#/register'
+        window.location.href = 'https://account.educatucredito.com/register'
       },
       translation (val) {
         if (val === 'en') {
