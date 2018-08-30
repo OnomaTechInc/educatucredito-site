@@ -112,7 +112,7 @@
                 <a class="" href="/why-choose-us">{{ link.whyus }}</a>
               </li>
               <li class="">
-                <a class="" href="/terms-and-conditions">{{ link.terms }}</a>
+                <a class="" href="/terms-of-use">{{ link.terms }}</a>
               </li>
               <li class="">
                 <a class="" href="/privacy-policy">{{ link.privacy }}</a>
