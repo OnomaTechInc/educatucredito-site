@@ -271,7 +271,7 @@
             aboutus: 'About Us',
             whyus: 'Why Choose Us',
             login: 'Login / Sign Up',
-            terms:'Terms and Conditions',
+            terms:'Terms of Use',
             privacy:'Privacy Policy'
           }
         } else {
@@ -281,7 +281,7 @@
             aboutus: 'Sobre Nosotros',
             whyus: 'Por Qué Elegirnos',
             login: 'Iniciar Sesión / Regístrate',
-            terms:'Términos y Condiciones',
+            terms:'Términos de Uso',
             privacy:'Política de privacidad'
           }
         }

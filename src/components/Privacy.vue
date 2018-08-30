@@ -3,13 +3,103 @@
     <header class="mainHeader">
       <div class="container">
           <div class="heading text-center">
-              <h3 class="text-uppercase">Privacy Policy</h3>
+                <h3 v-html="translationText.heading"></h3>
           </div>
       </div>
     </header>
     <section class="terms">
         <div class="container">
-            
+            <div class="box">
+                <h3 v-html="translationText.strong1"></h3>
+                <p v-html="translationText.text1"></p>
+            </div>
+            <div class="box">
+                <h4 v-html="translationText.strong2"></h4>
+                <p v-html="translationText.text2"></p>
+                <ul class="orderList" style="list-style:none;">
+                  <li>
+                    <h5 v-html="translationText.num1"></h5>
+                    <span class="big" v-html="translationText.text3a"></span>
+                  </li>
+                  <li>
+                    <h6 v-html="translationText.register"></h6>
+                    <span v-html="translationText.text3"></span>
+                  </li>
+                  <li>
+                    <h6 v-html="translationText.order"></h6>
+                    <span v-html="translationText.text4"></span>
+                  </li>
+                  <li>
+                    <h6 v-html="translationText.credit"></h6>
+                    <span v-html="translationText.text5"></span>
+                  </li>
+                  <li>
+                    <h6 v-html="translationText.surveys"></h6>
+                    <span v-html="translationText.text6"></span>
+                  </li>
+                  <li>
+                    <h5 v-html="translationText.num2"></h5>
+                    <span v-html="translationText.text7"></span>
+                    <span v-html="translationText.text8"></span>
+                  </li>
+                </ul>
+            </div>
+            <div class="box">
+                <h3 v-html="translationText.active"></h3>
+                <p v-html="translationText.text9"></p>
+                <p v-html="translationText.text10"></p>
+            </div>
+            <div class="box">
+                <h3 v-html="translationText.passive"></h3>
+                <p v-html="translationText.text11"></p>
+                <p v-html="translationText.text12"></p>
+                <p v-html="translationText.text13"></p>
+            </div>
+            <div class="box">
+                <h3 v-html="translationText.how"></h3>
+                <p v-html="translationText.text14"></p>
+                <p v-html="translationText.text15"></p>
+            </div>
+            <div class="box">
+                <h3 v-html="translationText.info"></h3>
+                <p v-html="translationText.text16"></p>
+            </div>
+            <div class="box">
+                <h3 v-html="translationText.sharing"></h3>
+                <p v-html="translationText.sharingtext"></p>
+            </div>
+            <div class="box">
+                <h3 v-html="translationText.sharing2"></h3>
+                <p v-html="translationText.text17"></p>
+            </div>
+            <div class="box">
+                <h3 v-html="translationText.secure"></h3>
+                <p v-html="translationText.text18"></p>
+            </div>
+            <div class="box">
+                <h3 v-html="translationText.access"></h3>
+                <p v-html="translationText.text19"></p>
+            </div>
+            <div class="box">
+                <h3 v-html="translationText.protect"></h3>
+                <p v-html="translationText.text20"></p>
+                <p v-html="translationText.text21"></p>
+            </div>
+            <div class="box">
+                <h3 v-html="translationText.links"></h3>
+                <p v-html="translationText.text22"></p>
+            </div>
+            <div class="box">
+                <h3 v-html="translationText.childrens"></h3>
+                <p v-html="translationText.text23"></p>
+            </div>
+            <div class="box">
+                <h3 v-html="translationText.changes"></h3>
+                <p v-html="translationText.text24"></p>
+            </div>
+            <div class="box">
+                <h2 v-html="translationText.boldtext"></h2>
+            </div>
         </div>
     </section>
   </v-container>
@@ -17,6 +107,15 @@
 <style scoped>
   .feature-item .text-muted {
     text-align: justify;
+  }
+  .orderList li span{
+    font-size: 1rem;
+    display: block;
+    padding-left: 15px;
+    margin-bottom: 20px;
+  }
+  .orderList li span.big{
+    font-size: 16px;
   }
 </style>
 
@@ -62,51 +161,105 @@
       translation (val) {
         if (val === 'en') {
             this.translationText = {
-                heading: 'TERMS OF USE',
-                title1:'ACCEPTANCE OF TERMS THROUGH USE',
-                title2:'YOU MUST BE 18 OR OLDER TO AGREE TO THIS AGREEMENT AND USE THIS SITE',
-                title3:'LICENSE TO USE THIS SITE',
-                title4:'LICENSE RESTRICTIONS USE',
-                title5:'Security',
-                title6:'Government Use',
-                title7:'Errors and Corrections',
-                title8:'LINKS TO OTHER WEBSITES',
-                title9:'USER CONDUCT',
-                title9:'INTELLECTUAL PROPERTY RIGHTS',
-                title1p:'By using this site or by clicking "I agree" to this Agreement, you ("User") signify your agreement to these terms and conditions. If you do not agree to this Agreement please do not use this site and do not click "I agree". Please check this Agreement periodically for changes as the owner of this site ("Company") reserves the right to revise this Agreement. In the event of a change to this Agreement, your continued use of this site following the posting of any changes constitutes acceptance of such changes. The Company reserves the right to terminate a User’s use of this site at any time without notice and may do so for any breach of this Agreement.',
-                title2p:'This Agreement must be completed, understood and agreed to by a person over 18. If a parent or guardian wishes to permit a person under 18to access this site, he or she should email the Company with his or her explicit permission and acceptance of full legal responsibility. If you are not yet 18 or are accessing this site from any country where this material is prohibited, please exit now as you do not have proper authorization.',
-                title3p:'Upon your agreement, Company hereby grants you a non-exclusive, non-transferable limited license to use this site in strict accordance with the terms and conditions in this Agreement. You agree not to make any false or fraudulent statements as you use this site. You acknowledge and agree that all content and services available on this site are property of the Company and are protected by copyrights, trademarks, service marks, patents, trade secrets, and other proprietary rights and laws, in the U.S. and internationally. All rights not expressly granted herein are fully reserved by the Company, its advertisers and licensors. You agree to pay for any and all purchases and services using your name and credit card through this Site, not to challenge any such charges and to pay for all collections and/or attorneys fees resulting from any non-payment.',
-                title4p:'Except as may be explicitly permitted, you agree not to save, download, cut and paste, sell, license, rent, lease, modify, distribute, copy, reproduce, transmit, publicly display, publicly perform, publish, adapt, edit, or create derivative works from materials from this site. Systematic retrieval of data or other content from this site to create or compile, directly or indirectly, a collection, database or directory without written permission from the Company is prohibited. In addition, use of the content or materials for any purpose not expressly permitted in this Agreement is prohibited.',
-                title5p1:'You agree that if you are issued a Username and Password by the Company, you shall use your best efforts to prevent access to this site through your Username and Password by anyone other than yourself, including but not limited to, keeping such information strictly confidential, notifying the Company immediately if you discover loss or access to such information by an unauthorized party and by using a secure Username and Password not easily guessed by a third party.',
-                title5p2:'You agree that you shall not try to reverse assemble, reverse compile, decompile, disassemble, translate or otherwise alter any executable code, contents or materials on or received via this site. You understand that such actions are likely to subject you to serious civil and criminal legal penalties and that the Company shall pursue such penalties to the full extent of the law to protect its rights and the rights of its other licensors. Export',
-                title5p3:'You agree that you shall comply with all applicable export and import control laws and regulations in your use of this site, or materials or services received through this site, and, in particular, you shall not export or re-export anything on or received through this site in violation or local or foreign export laws and/or without all required U.S. and foreign government licenses.',
-                title6p:'If you are a branch or agency of the U.S. Government, the following provision applies. This site, code, contents, services and accompanying documentation are comprised of "commercial computer software" and "commercial computer software documentation" as such terms are used in 48 C.F.R. 12.212 (SEPT 1995) and are provided to the Government (i) for acquisitions by or on behalf of civilian agencies, consistent with the policy set forth in 48 C.F.R. 12.212; or (ii) for acquisitions by or on behalf of units of the Department of Defense, consistent with the policies set forth in 48 C.F.R. 227.7202-1 (JUN 1995) and 227.7202-3 (JUN 1995. Unpublished rights reserved under the copyright laws of the United States.',
-                title7p:'While we use reasonable efforts to include accurate and current information on our Site, we do not warrant or represent that the Site will be error-free. Data entry errors or other technical problems may sometimes result in inaccurate information being shown. We reserve the right to correct any inaccuracies or typographical errors on our Site, including pricing and availability of products and services, and shall have no liability for such errors. We may also make improvements and/or changes to the Site’s features, functionality, or content at any time. If you see any information or description you believe to be incorrect, please contact us and we’ll verify it for you.',
-                title8p:'Our Site contains links to other websites for your information and convenience, or to provide additional shopping for various other goods and services through our Merchant and Services Partners. These third-party websites are responsible for, and undertake to maintain, their own site terms of use. We suggest that you carefully review the terms of use of each site you choose to access from our Site.',            
-                title9p1:'By using features of this site that allow you to post or otherwise transmit information to or through this site, or which may be seen by other users, you agree that you shall not upload, post, or otherwise distribute or facilitate distribution of any content – including text, communications, video, software, images, sounds, data, or other information – that:',
-                title9list1:'a. is unlawful, threatening, abusive, harassing, defamatory, libelous, deceptive, fraudulent, invasive of another’s privacy, tortuous, obscene, sexually explicit or graphic, or otherwise in violation of this site’s rules or policies;',
-                title9list2:'b. infringes any patent, trademark, service mark, trade secret, copyright, moral right, right of publicity, privacy or other proprietary right of any party;',
-                }
+              heading: 'PRIVACY POLICY',
+              strong1:'Our Commitment to Privacy',
+              text1:'Our Privacy Policy has been developed as an extension of our commitment to combine quality products and services with integrity in dealing with users. The Policy is designed to assist you in the understanding of how we collect, use and protect the personal information provided to us.',
+              strong2:'What Information Do We Collect?',
+              text2:'When you visit our site, we collect two types of information: personal information you actively choose to disclose ("Active Information") and Use information collected, in a way not visible to you, on an aggregate anonymous basis as you and other users browse our site ("Passive Information")',
+              num1:'1. Personally Identifiable Information',
+              text3a:'This refers to information that lets us know specifically about you i.e. profile information.',
+              register:'a. Registration',
+              text3:'When you register to become an authorized reseller of our products or services, we will collect Personally Identifiable Information (such as name, address, email address, and telephone number). This Personally Identifiable Information is securely stored and may be accessed on our website. You are assigned an identification number and select your own password – both are needed to enter the Site and to access your Contact Information. Please safeguard your password in a secure location as we are not responsible for breaches into the system when access is willingly provided.',
+              order:'b. Ordering',
+              text4:'When you place an order for products or services, we collect Personally Identifiable Information (such as name, contact and billing information, credit card, and other transactional information). We use this information to deliver your order, process payment, and to communicate the status of your order.',
+              credit:'c. Credit Card Storage',
+              text5:'Credit card information collected at registration or for product orders is used only to process payment for the transaction and, generally, is not retained on our Site. However, you may voluntarily elect to securely store multiple credit cards to be used for product orders.',
+              surveys:'d. Surveys and Promotions',
+              text6:'Occasionally, you may voluntarily provide Personally Identifiable Information to complete surveys and questionnaires or to participate in user polls. We use this information to improve our products and services and to ensure that we’re providing accurate disclosures. We may also use your Personally Identifiable Information to provide you newsletters and other marketing information that coincide with your preferences. You may customize your marketing preferences, or let us know if you do not wish to receive any promotional materials, by adjusting your Subscriptions & Email options on the Site.',
+              num2:'2. Aggregate Information',
+              text7:'This refers to information that does not, by itself, identify you as a specific individual. Such information would include the Uniform Resource Locator ("URL") of the website that referred you to our Site, your Internet Protocol ("IP") address (a number automatically assigned to your computer whenever you surf the web), your operating system and browser type, and any search terms that you enter on our Site. Our web server aggregates this information in order to monitor the level of activity on our Site, evaluate its effectiveness, and improve the content or our Site in order to make your visit an easy and enjoyable experience.',
+              text8:'We may collect, compile, store, publish, promote, report, or otherwise disclose or use any Aggregate Information, provided that such information does not personally identify you. We do not correlate any Personally Identifiable Information with the Aggregate Information that we collect on our Site. If we do correlate any Aggregate Information to you, it will be protected like any other Personally Identifiable Information under this Privacy Statement.',
+              active:'Active Information You Choose to Provide',
+              text9:'In order to gain use of the site (become a "user"), we require you to disclose the following information: Name, Address and Phone Number',
+              text10:'We use secure socket layer (SSL) encryption to protect the transmission of the information you submit to us when you use our secure online forms. The information you provide to us is stored securely.',
+              passive:'Passive Information Collected What is a Cookie?',
+              text11:'Cookies are a feature of web browser software that allows web servers to recognize the computer used to access a site. They are small pieces of data stored by a user’s browser to simplify subsequent interactions with the site. This makes it easier for a user to move from site to site and to complete transactions over the Internet. Cookies should make your online experience easier and more personalized.',
+              text12:'Our site utilizes cookies to collect information about how our site is used. Passive Information gathered may include the date and time of visits, the site pages viewed, time spent at our site, the sites visited just before and just after visiting our site. If you do not wish to transmit "cookie" information about yourself, you may turn off the cookie function in your web browser. Our site’s servers also automatically identify you computer by its Internet Protocol address, which is a unique string of numbers that are assigned to your computer by your Internet Service Provider.',
+              text13:'The IP address may be used to address problems with our server or to gather broad demographic information about our users. We passively collect your IP Address.',
+              how:'How Do We Use the Information Collected?',
+              text14:'Broadly speaking, persons we employ directly, or as contractors or agents at our direction, use Active Information for purposes of administering our business activities, providing customer support and making available other products or services we think might be of interest to our users. We may use the Active Information or Passive Information you provide to contact you about various changes to our site, new services, features or products we offer. If at any time you do not wish to receive such information, you may "opt-out" of doing so by adjusting your email settings in the back office of the website.',
+              text15:'We use Passive Information to gather information about our users and to enhance our site to make it easier, faster and friendlier for users. Additionally, cookies help us better understand the usage pattern of the people that visit our site, which helps us improve our services. Passive Information may result in your viewing of particular advertising based on your user habits.',
+              info:'Your Information In Relation to Others We Link To',
+              text16:'You might be able to access other websites through our site via hyperlinks. When you do so, you are subjecting yourself to their privacy policies and data collection. Please read the privacy policies of those sites to ensure you agree with the terms before using such sites.',
+              sharing:'Sharing Information with Advertisers or Other Third Parties',
+              sharingtext:'We may disclose anonymous information about user habits to advertisers on our site. The parties who perform services for us (credit card processors, merchant bank, Internet Service Provider) may also have access to your information in performing such services. Should we buy or sell assets of our company, another company may need to review our company’s assets, which might include your information, to make business decisions as to whether to acquire such assets.',
+              sharing2:'Sharing Information with the Government or As Otherwise Required by Law',
+              text17:'We may be required by subpoena, law or government agency to disclose both Active and Passive Information you have provided to us.',
+              secure:'How Do We Secure Active Information and Passive Information?',
+              text18:'We secure your personal information submitted by you by using reasonable efforts to prevent unauthorized access or disclosure, or accidental loss of Active and Passive Information. Individual postings on this site and other communications to our office via email or standard mail may not be secure unless we advise you that security measures are in place prior to your submission of information. Therefore, if you choose to communicate with us through these means, you are assuming the risk of doing so and we respectfully request that you do not send or post sensitive information through these means.',
+              access:'Accessing and Correcting Your Information',
+              text19:'We take reasonable measures to ensure that any Personally Identifiable Information we collect on our Site is accurate, current, complete, and reliable for its intended use. If you wish to update or otherwise correct Personally Identifiable Information provided to us, you may edit your information online.',
+              protect:'Protecting Your Information',
+              text20:'We acknowledge your trust and are committed to take reasonable steps to protect Personally Identifiable Information provided from loss, misuse, and unauthorized access. We employ physical, electronic, and managerial processes to safeguard and secure your information.',
+              text21:'It is you responsibility to safeguard the password you use to access our Site and to promptly advise us if you ever suspect that your password has been compromised. We strongly encourage you to change your password regularly to prevent unauthorized access. Because your identification number and password are specific to you, you acknowledge sole responsibility for any and all use of our Site conducted with your identification number and password.',
+              links:'Links to Other Websites',
+              text22:'Links to third-party websites may be provided solely for your information and convenience or to provide additional shopping for various other goods and services through our Merchant and Services Partners. If you use these links, you will leave our Site. This Privacy Statement does not cover the information practices of those websites nor do we control their content or privacy policies. We suggest that you carefully review the privacy policies of each site you visit.',
+              childrens:'Children’s Privacy Protection',
+              text23:'We take special care to protect the privacy needs of children and encourage parents to be an active participant in their child’s online activities. Our Site does not target and is not intended for children under the age of 18, and we will not knowingly collect Personally Identifiable Information from them. If we discover personal data from a child through our site, we will eliminate that data.You may learn more about protecting children’s privacy online by visiting: <a href=http://www.ftc.gov/bcp/edu/pubs/consumer/tech/tec08.shtm>http://www.ftc.gov/bcp/edu/pubs/consumer/tech/tec08.shtm</a>.',
+              changes:'Changes to This Statement',
+              text24:'Any updates or changes to the terms of this Privacy Statement will be posted on our Site and the date of the newest version posted below. Please check back frequently, especially before you submit any Personally Identifiable Information at our Site, to see if this Privacy Statement has changed. By using our Site, you acknowledge acceptance of this Privacy Statement in effect at the time of use.',
+              boldtext:'YOUR USE OF OUR SITE MEANS THAT YOU ACCEPT THE PRACTICES SET FORTH IN THIS POLICY. YOUR CONTINUED USE INDICATES YOUR AGREEMENT TO THE CHANGES.'
+          }
         } else if (val === 'es') {
           this.translationText = {
-            heading: 'POR QUÉ ELEGIRNOS',
-            lead: 'La educación financiera no es solo para los ricos.',
-            whyusp1: 'La educación financiera no es solo para los ricos. Esto es para todos. Todos tenemos derecho a saber que la libertad financiera no es imposible y que es alcanzable mediante la orientación correcta y la ayuda de expertos financieros que se preocupan por usted.',
-            whyusp2: 'Con muchos años de experiencia combinada, tenemos una amplia capacitación en análisis sobre cómo funcionan las oficinas de crédito. Entendemos y queremos compartir con nuestros clientes los derechos legales que tienen para protegerse durante la crisis financiera.',
-            whyusp3: 'Colaboramos entre nosotros y analizamos cada situación que tenemos en cada uno de nuestros clientes y proporcionamos formas estratégicas para aumentar su puntaje de crédito, eliminar informes de crédito erróneos y sugerir sugerencias sobre formas específicas para ayudarlos a manejar bien sus deudas con el objetivo de lograr buenos resultados financieros. estilo de vida.',
-            whyusp4: 'Estos son algunos de los logros y métodos eficaces comprobados que tenemos hasta el momento en que damos el 100% de satisfacción a todos nuestros clientes que tienen un cambio tremendo en su aspecto financiero de la vida.',
-            list1: 'Todos nuestros clientes confían en nosotros',
-            list2: 'Nos enorgullecemos de nuestra calificación A + acreditada con el Better Business Bureau:',
-            list3: 'Complete la participación del cliente con la revisión y el cambio a sus disputas',
-            list4: 'Controle su progreso en línea las 24 horas, todos los días, con un Servicio al Cliente de primera clase',
-            list5: 'Los mejores precios en cualquier lugar y evitar una posible multa fiscal',
-            list6: 'Nuestro objetivo es enseñar y entrenar. NOSOTROS tenemos el Centro de Educación y Recursos: Incluye una amplia variedad de servicios educativos, consejos de crédito y herramientas de presupuesto para establecer y mantener su buen crédito.',
-            list7: 'DebtZero se considera una de las herramientas más potentes de nuestra lista de servicios que le ofrecemos. Es una guía clara sobre cómo pagar de manera más eficiente su deuda. Teniendo en cuenta sus obligaciones e intereses de deuda, el sistema le mostrará exactamente cómo asignar correctamente su dinero a sus pagos mensuales utilizando únicamente sus ingresos actuales, a fin de acelerar el pago de su deuda. No solo asignará los miles de dólares que ahorrará intereses pagando su deuda significativamente antes de lo esperado, sino que le mostrará la cantidad de dinero duramente ganado que puede ahorrar al eliminar años innecesarios de pagos de intereses.',
-            list8: 'No hay vendedores molestos. Contamos con un personal de servicio al cliente amigable para responder sus preguntas. Nunca dejamos de preocuparnos por todos nuestros clientes hasta que logran una vida libre de crisis financieras y obtener la tranquilidad de las incertidumbres de la vida',
-            list9: 'Ofrecemos mayores tasas de devolución de efectivo que sus competidores',
-            list10: 'Ofrecemos plataformas confiables y seguras para cada servicio',
-            whyusp5: 'Todas estas son representaciones de nuestro compromiso personal con la satisfacción del cliente, la preocupación genuina y la atención para ayudar a las personas a sobrellevar y superar las dificultades financieras. Los ayudamos a lograr un cambio increíble en su estilo de vida financiero.',
-            whyusp6: 'Por qué esperar Solo lleva un minuto <a href=#/register>registrarse</a>. Su información está segura con nosotros. Tratamos sus datos como si fueran nuestros. Comience el camino hacia un futuro financiero mejor. <a href=tel:813-444-5539>¡Llámanos ahora!</a>'
+              heading: 'POLÍTICA DE PRIVACIDAD',
+              strong1:'Nuestro Compromiso Con La Privacidad',
+              text1:'Nuestra política de privacidad se ha desarrollado como una extensión de nuestro compromiso de combinar productos y servicios de calidad con integridad al tratar con los usuarios. La Política está diseñada para ayudarlo a comprender cómo recopilamos, usamos y protegemos la información personal que se nos proporciona.',
+              strong2:'¿Qué información recopilamos?',
+              text2:'Cuando visita nuestro sitio, recopilamos dos tipos de información: la información personal que elige divulgar activamente ("Información activa") y Usa la información recopilada, de forma no visible para usted, en forma anónima agregada mientras usted y otros usuarios navegan nuestro sitio ("Información pasiva")',
+              num1:'1. Información de identificación personal',
+              text3a:'Esto se refiere a información que nos permite saber específicamente sobre usted, es decir, información de perfi',
+              register:'a. Registro',
+              text3:'Cuando se registre para convertirse en un distribuidor autorizado de nuestros productos o servicios, recopilaremos información de identificación personal (como nombre, dirección, dirección de correo electrónico y número de teléfono). Esta información de identificación personal se almacena de forma segura y se puede acceder a ella en nuestro sitio web. Se le asigna un número de identificación y selecciona su propia contraseña; ambos son necesarios para ingresar al Sitio y para acceder a su Información de contacto. Proteja su contraseña en un lugar seguro ya que no somos responsables de las infracciones en el sistema cuando el acceso se proporciona de manera voluntaria.',
+              order:'b. Ordenando',
+              text4:'Cuando realiza un pedido de productos o servicios, recopilamos información de identificación personal (como nombre, contacto e información de facturación, tarjeta de crédito y otra información transaccional). Usamos esta información para entregar su pedido, procesar el pago y comunicar el estado de su pedido.',
+              credit:'c. Almacenamiento con tarjeta de crédito',
+              text5:'La información de la tarjeta de crédito recopilada en el registro o para pedidos de productos se usa solo para procesar el pago de la transacción y, en general, no se conserva en nuestro Sitio. Sin embargo, puede elegir voluntariamente almacenar de forma segura varias tarjetas de crédito para usar en pedidos de productos.',
+              surveys:'d.  Encuestas y Promociones',
+              text6:'Ocasionalmente, puede proporcionar voluntariamente información de identificación personal para completar encuestas y cuestionarios o para participar en encuestas de usuarios. Usamos esta información para mejorar nuestros productos y servicios y para garantizar que proporcionamos divulgaciones precisas. También podemos usar su información de identificación personal para enviarle boletines informativos y otra información de marketing que coincida con sus preferencias. Puede personalizar sus preferencias de marketing, o informarnos si no desea recibir ningún material promocional, ajustando sus opciones de suscripción y correo electrónico en el sitio',
+              num2:'2. Información agregada',
+              text7:'Esto se refiere a la información que, por sí misma, no lo identifica como un individuo específico. Dicha información incluiría el Localizador Uniforme de Recursos ("URL") del sitio web que lo remitió a nuestro Sitio, su dirección de Protocolo de Internet ("IP") (un número asignado automáticamente a su computadora cada vez que navega por la web), su sistema operativo y tipo de navegador, y cualquier término de búsqueda que ingrese en nuestro Sitio. Nuestro servidor web agrega esta información para monitorear el nivel de actividad en nuestro Sitio, evaluar su efectividad y mejorar el contenido de nuestro Sitio para que su visita sea una experiencia fácil y agradable.',
+              text8:'Podemos recopilar, compilar, almacenar, publicar, promocionar, informar o divulgar o utilizar cualquier información agregada, siempre que dicha información no lo identifique personalmente. No correlacionamos ninguna información de identificación personal con la información agregada que recopilamos en nuestro sitio. Si correlacionamos cualquier información agregada con usted, estará protegida como cualquier otra información de identificación personal según esta Declaración de privacidad.',
+              active:'Información activa que elige proporcionar',
+              text9:'Para aprovechar el sitio (conviértase en un "usuario"), le solicitamos que divulgue la siguiente información: nombre, dirección y número de teléfono',
+              text10:'Usamos cifrado de capa de conexión segura (SSL) para proteger la transmisión de la información que nos envía cuando utiliza nuestros formularios seguros en línea. La información que nos proporciona se almacena de forma segura.',
+              passive:'Información pasiva recopilada ¿Qué es una cookie?',
+              text11:'Las cookies son una característica del software de navegador web que permite a los servidores web reconocer la computadora utilizada para acceder a un sitio. Son pequeñas piezas de datos almacenados por el navegador de un usuario para simplificar las interacciones posteriores con el sitio. Esto hace que sea más fácil para un usuario moverse de un sitio a otro y completar transacciones a través de Internet. Las cookies deben hacer que su experiencia en línea sea más fácil y personalizada',
+              text12:'Nuestro sitio utiliza cookies para recopilar información sobre cómo se usa nuestro sitio. Pasiva La información recopilada puede incluir la fecha y la hora de las visitas, las páginas del sitio visitadas, el tiempo pasado en nuestro sitio, los sitios visitados justo antes y justo después de visitar nuestro sitio. Si no desea transmitir información sobre "cookies" sobre usted, puede desactivar la función de cookies en su navegador web. Los servidores de nuestro sitio también identifican automáticamente su computadora por su dirección de Protocolo de Internet, que es una cadena única de números que su Proveedor de Servicios de Internet asigna a su computadora. La dirección IP puede usarse para resolver problemas con nuestro servidor o para recopilar información demográfica amplia sobre nuestros usuarios. Recopilamos pasivamente su dirección IP.',
+              text13:'The IP address may be used to address problems with our server or to gather broad demographic information about our users. We passively collect your IP Address.',
+              how:'¿Cómo utilizamos la información recopilada?',
+              text14:'En términos generales, las personas que empleamos directamente, o como contratistas o agentes bajo nuestra dirección, usan Active Information para administrar nuestras actividades comerciales, proporcionar soporte al cliente y poner a disposición otros productos o servicios que creemos que pueden ser de interés para nuestros usuarios. Podemos utilizar la información activa o la información pasiva que brinde para contactarlo sobre diversos cambios en nuestro sitio, nuevos servicios, características o productos que ofrecemos. Si en algún momento no desea recibir dicha información, puede "optar por no participar" al hacerlo ajustando su configuración de correo electrónico en la oficina administrativa del sitio web.',
+              text15:'Usamos información pasiva para recopilar información sobre nuestros usuarios y mejorar nuestro sitio para que sea más fácil, más rápido y más amigable para los usuarios. Además, las cookies nos ayudan a comprender mejor el patrón de uso de las personas que visitan nuestro sitio, lo que nos ayuda a mejorar nuestros servicios. La información pasiva puede dar como resultado la visualización de publicidad en particular en función de sus hábitos de usuario.',
+              info:'Su información en relación con otros nos vinculamos a',
+              text16:'Es posible que pueda acceder a otros sitios web a través de nuestro sitio a través de hipervínculos. Cuando lo hace, se está sometiendo a sus políticas de privacidad y recopilación de datos. Lea las políticas de privacidad de esos sitios para asegurarse de estar de acuerdo con los términos antes de utilizar dichos sitios.',
+              sharing:'Compartir información con anunciantes u otros terceros',
+              sharingtext:'Podemos divulgar información anónima sobre los hábitos de los usuarios a los anunciantes en nuestro sitio. Las partes que prestan servicios para nosotros (procesadores de tarjetas de crédito, banco comercial, proveedor de servicios de Internet) también pueden tener acceso a su información al realizar dichos servicios. Si compramos o vendemos activos de nuestra compañía, es posible que otra compañía tenga que revisar los activos de nuestra compañía, que pueden incluir su información, para tomar decisiones comerciales sobre la adquisición de dichos activos.',
+              sharing2:'Compartir información con el gobierno o según lo requiera la ley',
+              text17:'Es posible que seamos requeridos por citación, ley o agencia gubernamental para divulgar información activa y pasiva que nos haya proporcionado.',
+              secure:'¿Cómo aseguramos información activa e información pasiva?',
+              text18:'Protegemos su información personal presentada por usted mediante el uso de esfuerzos razonables para evitar el acceso o la divulgación no autorizados, o la pérdida accidental de información activa y pasiva. Las publicaciones individuales en este sitio y otras comunicaciones a nuestra oficina por correo electrónico o correo estándar pueden no ser seguras a menos que le avisemos que existen medidas de seguridad antes de enviar su información. Por lo tanto, si elige comunicarse con nosotros a través de estos medios, está asumiendo el riesgo de hacerlo y le pedimos respetuosamente que no envíe o publique información confidencial a través de estos medios.',
+              access:'Accediendo y corrigiendo su información',
+              text19:'Tomamos medidas razonables para garantizar que cualquier información de identificación personal que recopilemos en nuestro sitio sea precisa, actual, completa y confiable para su uso previsto. Si desea actualizar o corregir la información de identificación personal que se nos proporciona, puede editar su información en línea.',
+              protect:'Protegiendo su información',
+              text20:'Reconocemos su confianza y nos comprometemos a tomar medidas razonables para proteger la información de identificación personal provista por la pérdida, el uso indebido y el acceso no autorizado. Empleamos procesos físicos, electrónicos y gerenciales para salvaguardar y proteger su información.',
+              text21:'Es su responsabilidad proteger la contraseña que usa para acceder a nuestro Sitio y avisarnos inmediatamente si alguna vez sospecha que su contraseña se ha visto comprometida. Le recomendamos encarecidamente que cambie su contraseña regularmente para evitar el acceso no autorizado. Debido a que su número de identificación y contraseña son específicos para usted, usted reconoce la responsabilidad exclusiva por el uso de nuestro Sitio con su número de identificación y contraseña.',
+              links:'Enlaces a otros sitios web',
+              text22:'Los enlaces a sitios web de terceros se pueden proporcionar únicamente para su información y conveniencia o para proporcionar compras adicionales para otros bienes y servicios a través de nuestros socios de comerciantes y servicios. Si usa estos enlaces, abandonará nuestro sitio. Esta Declaración de privacidad no cubre las prácticas de información de esos sitios web ni controlamos su contenido o políticas de privacidad. Sugerimos que revise cuidadosamente las políticas de privacidad de cada sitio que visite.',
+              childrens:'Protección de la privacidad de los niños',
+              text23:'Tomamos especial cuidado para proteger las necesidades de privacidad de los niños y alentamos a los padres a ser un participante activo en las actividades en línea de sus hijos. Nuestro sitio no está dirigido y no está destinado a niños menores de 18 años, y no recopilaremos a sabiendas información de identificación personal de ellos. Si descubrimos datos personales de un niño a través de nuestro sitio, eliminaremos esa información. Puede obtener más información sobre cómo proteger la privacidad de los niños en línea visitando: <a href=http://www.ftc.gov/bcp/edu/pubs/consumer/tech/tec08.shtm>http://www.ftc.gov/bcp/edu/pubs/consumer/tech/tec08.shtm</a>.',
+              changes:'Cambios a esta declaración',
+              text24:'Todas las actualizaciones o cambios a los términos de esta Declaración de privacidad se publicarán en nuestro Sitio y la fecha de la versión más nueva publicada a continuación. Consulte con frecuencia, especialmente antes de enviar cualquier información de identificación personal en nuestro sitio, para ver si esta declaración de privacidad ha cambiado. Al utilizar nuestro sitio, usted reconoce la aceptación de esta declaración de privacidad vigente al momento de su uso',
+              boldtext:'SU USO DE NUESTRO SITIO SIGNIFICA QUE ACEPTA LAS PRÁCTICAS ESTABLECIDAS EN ESTA POLÍTICA. SU USO CONTINUADO INDICA SU ACUERDO CON LOS CAMBIOS.'
           }
         }
       }
