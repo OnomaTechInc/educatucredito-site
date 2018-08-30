@@ -66,7 +66,7 @@ export default new Router({
     component: AboutUs
   },
   {
-    path: '/terms-and-conditions',
+    path: '/terms-of-use',
     name: 'Terms',
     component: Terms
   },
